@@ -1,0 +1,131 @@
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow-btn-inner {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 14px;
+}
+
+.arrow-btn-text {
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.arrow-icon-holder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-medium);
+}
+
+.stal-arrowline {
+  width: 32px;
+  height: 12px;
+  display: block;
+}
+
+/* Variant: Textual (Signature Stål link) */
+.arrow-btn--textual {
+  color: var(--near-black);
+  padding: 6px 0;
+  background: transparent;
+}
+
+.arrow-btn--textual .arrow-btn-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--near-black);
+  transition: width var(--transition-medium);
+}
+
+.arrow-btn--textual:hover .arrow-btn-underline {
+  width: 100%;
+}
+
+.arrow-btn--textual:hover .arrow-icon-holder {
+  transform: translateX(6px);
+}
+
+.arrow-btn--textual:hover .arrow-btn-text {
+  color: var(--near-black);
+}
+
+/* Variant: Outline (Minimalist bordered button) */
+.arrow-btn--outline {
+  color: var(--near-black);
+  background-color: var(--white);
+  border: 1px solid var(--near-black);
+  padding: 14px 28px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.arrow-btn--outline:hover {
+  background-color: var(--near-black);
+  color: var(--white);
+  border-color: var(--near-black);
+}
+
+.arrow-btn--outline:hover .arrow-icon-holder {
+  transform: translateX(6px);
+}
+
+/* Variant: Solid (Near-black solid) */
+.arrow-btn--solid {
+  color: var(--white);
+  background-color: var(--near-black);
+  border: 1px solid var(--near-black);
+  padding: 14px 28px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.arrow-btn--solid:hover {
+  background-color: var(--white);
+  color: var(--near-black);
+  border-color: var(--near-black);
+}
+
+.arrow-btn--solid:hover .arrow-icon-holder {
+  transform: translateX(6px);
+}
+
+/* Variant: Light Solid (For dark backgrounds or accent cards) */
+.arrow-btn--light-solid {
+  color: var(--near-black);
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  padding: 14px 28px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.arrow-btn--light-solid:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.arrow-btn--light-solid:hover .arrow-icon-holder {
+  transform: translateX(6px);
+}

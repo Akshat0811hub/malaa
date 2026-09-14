@@ -1,0 +1,102 @@
+.stats-section {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 80px 0;
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--border-light);
+}
+
+.stat-box {
+  padding: 24px 36px;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms var(--ease-out-cubic), box-shadow 300ms var(--ease-out-cubic), border-color 300ms var(--ease-out-cubic);
+  border-top: 2px solid transparent;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  background-color: var(--off-white);
+  border-top-color: var(--near-black);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+}
+
+.stat-box:hover .stat-number {
+  transform: scale(1.03);
+}
+
+.stat-top-meta {
+  margin-bottom: 20px;
+}
+
+.stat-index {
+  font-family: var(--font-technical);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+}
+
+.stat-number {
+  font-family: var(--font-primary);
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 500;
+  color: var(--near-black);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.stat-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--near-black);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.stat-detail {
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-box {
+    padding: 32px 24px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .stat-box:nth-child(3),
+  .stat-box:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-strip {
+    grid-template-columns: 1fr;
+    border-left: none;
+  }
+
+  .stat-box {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 28px 0;
+  }
+
+  .stat-box:last-child {
+    border-bottom: none;
+  }
+}

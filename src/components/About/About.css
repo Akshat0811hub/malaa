@@ -1,0 +1,196 @@
+.about-section {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-light);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  margin-bottom: 72px;
+}
+
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-index-code {
+  font-family: var(--font-technical);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  color: var(--medium-gray);
+  margin-top: 4px;
+}
+
+.about-accent-line {
+  width: 48px;
+  height: 1px;
+  background-color: var(--border-medium);
+  margin-top: 32px;
+}
+
+.about-right-col {
+  max-width: 820px;
+}
+
+.about-heading {
+  margin-bottom: 32px;
+}
+
+.about-body-narrative {
+  margin-bottom: 36px;
+}
+
+.about-body-narrative .lead-paragraph {
+  font-size: 1.16rem;
+  line-height: 1.75;
+  color: var(--dark-charcoal);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.about-cta-holder {
+  display: inline-block;
+}
+
+/* About Media Banner & Pillars */
+.about-media-banner {
+  width: 100%;
+}
+
+.about-image-wrap {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 50vh, 560px);
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(105%);
+  transition: transform 1200ms cubic-bezier(0.16, 1, 0.3, 1), filter 800ms var(--ease-out-cubic);
+  will-change: transform;
+}
+
+.about-image-wrap:hover .about-image {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(108%);
+}
+
+.about-image-caption {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  border-right: 3px solid var(--near-black);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 420px;
+}
+
+.caption-tag {
+  font-family: var(--font-technical);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+}
+
+.caption-desc {
+  font-family: var(--font-primary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--near-black);
+  line-height: 1.4;
+}
+
+/* 3 Ethos Pillars */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--border-light);
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+}
+
+.pillar-item {
+  padding: 36px 32px;
+  border-right: 1px solid var(--border-light);
+  background-color: var(--white);
+  transition: background-color var(--transition-medium);
+}
+
+.pillar-item:last-child {
+  border-right: none;
+}
+
+.pillar-item:hover {
+  background-color: var(--off-white);
+}
+
+.pillar-num {
+  font-family: var(--font-technical);
+  font-size: 0.88rem;
+  color: var(--near-black);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+  border-bottom: 1.5px solid var(--accent-badge);
+  padding-bottom: 4px;
+}
+
+.pillar-title {
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.pillar-text {
+  font-size: 0.92rem;
+  color: var(--medium-gray);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 28px 24px;
+  }
+
+  .pillar-item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image-wrap {
+    height: 280px;
+  }
+
+  .about-image-caption {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}

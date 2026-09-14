@@ -1,0 +1,250 @@
+.page-about {
+  background-color: var(--white);
+}
+
+.page-hero-banner {
+  padding-top: calc(var(--header-height-normal) + 56px);
+  padding-bottom: 72px;
+  background-color: var(--off-white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.page-hero-content {
+  max-width: 860px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+}
+
+.page-lead {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: var(--medium-gray);
+  margin: 0;
+}
+
+/* Philosophy Section */
+.about-philosophy {
+  background-color: var(--white);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.philosophy-image-frame {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+
+.philosophy-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(105%);
+  transition: transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.philosophy-image-frame:hover .philosophy-img {
+  transform: scale(1.03);
+}
+
+.philosophy-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-heading {
+  font-size: clamp(1.8rem, 2.6vw, 2.2rem);
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.philosophy-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 24px;
+}
+
+.phil-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.phil-stat-num {
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--near-black);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.phil-stat-txt {
+  font-size: 0.84rem;
+  color: var(--medium-gray);
+}
+
+/* Timeline Milestones */
+.timeline-section {
+  background-color: var(--off-white);
+  border-top: 1px solid var(--border-light);
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.timeline-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-medium), border-color var(--transition-medium);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--near-black);
+}
+
+.timeline-year {
+  font-family: var(--font-technical);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--near-black);
+  margin-bottom: 16px;
+}
+
+.timeline-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.timeline-card-desc {
+  font-size: 0.88rem;
+  color: var(--medium-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.timeline-hairline {
+  margin-top: auto;
+  padding-top: 24px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-badge);
+}
+
+/* Team Grid */
+.team-section {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-light);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-photo-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  margin-bottom: 20px;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(110%);
+  transition: transform 1000ms cubic-bezier(0.16, 1, 0.3, 1), filter 600ms var(--ease-out-cubic);
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.04);
+  filter: grayscale(20%) contrast(106%);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--near-black);
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.88rem;
+  color: var(--dark-charcoal);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.team-creds {
+  font-family: var(--font-technical);
+  font-size: 0.76rem;
+  color: var(--medium-gray);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-image-frame {
+    height: 300px;
+  }
+
+  .team-photo-wrap {
+    height: 320px;
+  }
+}
