@@ -51,8 +51,14 @@ export default function Header() {
           <Link to="/" className="site-logo" aria-label="MALA Engg. Works Home">
             <img src={logoImg} alt="MALA Engg. Works" className="site-logo-img" />
             <div className="logo-text-block">
-              <span className="logo-brand-title">MALA ENGG. WORKS</span>
-              <span className="logo-descriptor">ARCHITECTURE & STEEL</span>
+              <div className="logo-title-row">
+                <span className="logo-brand-title">MALA ENGG. WORKS</span>
+                <span className="header-status-indicator" title="Studio Open for Commissions">
+                  <span className="status-ping-dot"></span>
+                  <span className="status-label">OPEN</span>
+                </span>
+              </div>
+              <span className="logo-descriptor">ARCHITECTURE & INDUSTRIAL STEEL</span>
             </div>
           </Link>
 
@@ -69,21 +75,22 @@ export default function Header() {
                     end={item.path === '/'}
                   >
                     <span className="nav-link-text">{item.label}</span>
-                    <span className="nav-link-underline"></span>
                   </NavLink>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Header Action Contact Button */}
+          {/* Header Right Actions */}
           <div className="header-right-actions">
             <Link to="/contact" className="header-cta-btn">
-              <span>Inquire</span>
-              <svg className="cta-arrow" viewBox="0 0 20 12" fill="none">
-                <line x1="1" y1="6" x2="18" y2="6" stroke="currentColor" strokeWidth="1.3" />
-                <path d="M14 2L18 6L14 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
-              </svg>
+              <span className="header-cta-txt">Inquire</span>
+              <span className="cta-arrow-box">
+                <svg className="cta-arrow" viewBox="0 0 16 12" fill="none">
+                  <line x1="1" y1="6" x2="14" y2="6" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M10 2L14 6L10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+                </svg>
+              </span>
             </Link>
 
             {/* Mobile Hamburger Button */}
