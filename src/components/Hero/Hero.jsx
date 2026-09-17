@@ -8,34 +8,45 @@ const featuredProjects = [
   {
     id: 1,
     code: 'PROJ-01',
-    name: 'Luleå Metallurgy Center / Phase IV',
+    name: 'Luleå Metallurgy Center & Clear-Span Hall',
     location: 'Luleå, Sweden',
     sector: 'Heavy Industry & Metallurgy',
     stat: '42,000 m²',
     statLabel: 'Clear-Span Volume',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2400&auto=format&fit=crop',
     tag: 'Flagship Commission'
   },
   {
     id: 2,
     code: 'PROJ-02',
-    name: 'Bregenz Cantilever Terminal',
+    name: 'The Helix Parametric Pavilion & Vaults',
     location: 'Lake Constance, Austria',
-    sector: 'Structural Cantilever Logistics',
+    sector: 'Structural Cantilevers & Arches',
     stat: '38 Meters',
     statLabel: 'Column-Free Cantilever',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop',
-    tag: 'Structural Engineering'
+    image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=2400&auto=format&fit=crop',
+    tag: 'Parametric Engineering'
   },
   {
     id: 3,
     code: 'PROJ-03',
-    name: 'Gothenburg Cold-Rolled Assembly Node',
-    location: 'Gothenburg, Sweden',
-    sector: 'Automated Industrial Fabrication',
+    name: 'Stockholm High-Tensile Glass Monolith',
+    location: 'Stockholm, Sweden',
+    sector: 'Commercial & High-Rise Steel',
     stat: 'EN 1090-2 EXC4',
     statLabel: 'Quality Standard',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop',
+    tag: 'Architectural Landmark'
+  },
+  {
+    id: 4,
+    code: 'PROJ-04',
+    name: 'Gothenburg Cold-Rolled Assembly Node',
+    location: 'Gothenburg, Sweden',
+    sector: 'Robotic Fabrication Complex',
+    stat: '±0.02 mm',
+    statLabel: 'CNC Precision Tolerance',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop',
     tag: 'Industrial Complex'
   }
 ];
@@ -49,11 +60,11 @@ export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 80);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
-  // Autoplay slides unless hovered
+  // Autoplay slides every 6 seconds unless hovered
   useEffect(() => {
     if (isHovered) return;
 
@@ -64,167 +75,250 @@ export default function Hero() {
     return () => clearInterval(slideTimerRef.current);
   }, [isHovered]);
 
+  const handlePrevSlide = () => {
+    setActiveSlide((prev) => (prev === 0 ? featuredProjects.length - 1 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % featuredProjects.length);
+  };
+
   const currentProj = featuredProjects[activeSlide];
 
   return (
-    <section className={`hero-banner ${isLoaded ? 'is-loaded' : ''}`}>
-      {/* Blueprint Architectural Grid Background */}
-      <div className="hero-grid-pattern" aria-hidden="true"></div>
-      <div className="hero-ambient-glow" aria-hidden="true"></div>
-
-      <div className="container hero-container">
-        {/* Top Header Text Block */}
-        <div className="hero-text-content">
-          <div className="hero-eyebrow-wrap hero-animate-1">
-            <div className="hero-status-tag">
-              <span className="hero-radar-dot"></span>
-              <span className="hero-radar-text">PRECISION STEEL & ARCHITECTURAL ENGINEERING</span>
-            </div>
-            <span className="hero-coords">ZURICH • STOCKHOLM • EST. 2011</span>
+    <section
+      className={`hero-cinematic-banner ${isLoaded ? 'is-loaded' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label="Flagship Hero Showcase"
+    >
+      {/* Background Slides with Ken Burns and Multi-Stop Architectural Overlay */}
+      <div className="hero-slides-viewport" aria-hidden="true">
+        {featuredProjects.map((item, index) => (
+          <div
+            key={item.id}
+            className={`hero-slide-bg ${index === activeSlide ? 'is-active' : ''}`}
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="hero-slide-img"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              onError={handleImageError}
+            />
           </div>
+        ))}
+        {/* Layered Architectural Scrim & Blueprint Grid */}
+        <div className="hero-overlay-scrim"></div>
+        <div className="hero-blueprint-grid"></div>
+        <div className="hero-accent-glow"></div>
+      </div>
 
-          <h1 className="hero-title hero-animate-2">
-            Engineering Ideas Into<br />
-            <span className="hero-title-highlight">Lasting Monuments</span>
-          </h1>
+      {/* Blueprint Corner Crosshairs */}
+      <div className="hero-crosshair top-left" aria-hidden="true">+</div>
+      <div className="hero-crosshair top-right" aria-hidden="true">+</div>
+      <div className="hero-crosshair bottom-left" aria-hidden="true">+</div>
+      <div className="hero-crosshair bottom-right" aria-hidden="true">+</div>
 
-          <div className="hero-bottom-meta hero-animate-3">
-            <p className="hero-description">
-              We design and construct monumental structures, ultra-precision industrial facilities, and
-              high-tensile steel architectures engineered to withstand a century of rigorous performance.
+      {/* Main Banner Content Area */}
+      <div className="container hero-banner-content">
+        <div className="hero-banner-main-grid">
+          {/* Left Column: Headlines, Branding, Description & CTAs */}
+          <div className="hero-left-column">
+            {/* Live Status Beacon & Coordinates */}
+            <div className="hero-meta-badge hero-animate-1">
+              <div className="hero-beacon-pill">
+                <span className="hero-beacon-pulse"></span>
+                <span className="hero-beacon-text">MALA ENGG. WORKS // ARCHITECTURAL & STRUCTURAL STEEL</span>
+              </div>
+              <span className="hero-coordinates">ZURICH • STOCKHOLM • EST. 2011</span>
+            </div>
+
+            {/* Monumental Headline */}
+            <h1 className="hero-banner-title hero-animate-2">
+              Engineering Visionary Ideas Into{' '}
+              <span className="hero-title-highlight">Monumental Reality</span>
+            </h1>
+
+            {/* Crisp Description */}
+            <p className="hero-banner-lead hero-animate-3">
+              We design, engineer, and fabricate monumental architectures, column-free clear-spans,
+              and high-tensile industrial facilities built to withstand a century of rigorous performance.
             </p>
 
-            <div className="hero-actions hero-animate-4">
-              <ArrowButton to="/projects" variant="solid">
+            {/* Action Buttons */}
+            <div className="hero-banner-actions hero-animate-4">
+              <ArrowButton to="/projects" variant="light-solid" className="hero-btn-primary">
                 Explore Projects
               </ArrowButton>
-              <Link to="/contact" className="hero-secondary-btn">
+              <Link to="/contact" className="hero-btn-glass">
                 <span>Request Consultation</span>
-                <span className="btn-corner-accent"></span>
+                <svg className="btn-arrow-svg" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </Link>
+            </div>
+
+            {/* Verification Trust Strip */}
+            <div className="hero-trust-strip hero-animate-4">
+              <div className="trust-item">
+                <span className="trust-dot"></span>
+                <span className="trust-label">EN 1090-2 EXC4 CERTIFIED</span>
+              </div>
+              <div className="trust-item">
+                <span className="trust-dot"></span>
+                <span className="trust-label">100-YEAR STRUCTURAL INTEGRITY</span>
+              </div>
+              <div className="trust-item">
+                <span className="trust-dot"></span>
+                <span className="trust-label">±0.02 MM CNC TOLERANCE</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Floating Active Project HUD Card */}
+          <div className="hero-right-column hero-animate-media">
+            <div className="hero-project-hud-card">
+              <div className="hud-header">
+                <div className="hud-tag-wrap">
+                  <span className="hud-live-indicator"></span>
+                  <span className="hud-code">{currentProj.code}</span>
+                  <span className="hud-tag">{currentProj.tag}</span>
+                </div>
+                <span className="hud-slide-counter">
+                  0{activeSlide + 1} / 0{featuredProjects.length}
+                </span>
+              </div>
+
+              <h3 className="hud-title">{currentProj.name}</h3>
+
+              <div className="hud-meta-grid">
+                <div className="hud-meta-item">
+                  <span className="hud-meta-label">LOCATION</span>
+                  <span className="hud-meta-value">{currentProj.location}</span>
+                </div>
+                <div className="hud-meta-item">
+                  <span className="hud-meta-label">SECTOR</span>
+                  <span className="hud-meta-value">{currentProj.sector}</span>
+                </div>
+                <div className="hud-meta-item hud-meta-highlight">
+                  <span className="hud-meta-label">{currentProj.statLabel.toUpperCase()}</span>
+                  <span className="hud-meta-value hud-stat-number">{currentProj.stat}</span>
+                </div>
+              </div>
+
+              <div className="hud-action-row">
+                <Link to="/projects" className="hud-explore-link">
+                  <span>View Project Case Study</span>
+                  <svg viewBox="0 0 14 14" fill="none" className="hud-link-arrow">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Slider Navigation Bar */}
+            <div className="hero-slider-nav-bar">
+              <div className="slider-nav-arrows">
+                <button
+                  type="button"
+                  className="slider-arrow-btn"
+                  onClick={handlePrevSlide}
+                  aria-label="Previous Project"
+                >
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  className="slider-arrow-btn"
+                  onClick={handleNextSlide}
+                  aria-label="Next Project"
+                >
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Progress Slide Selectors */}
+              <div className="slider-nav-tabs">
+                {featuredProjects.map((item, idx) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={`slider-tab-btn ${idx === activeSlide ? 'is-active' : ''}`}
+                    onClick={() => setActiveSlide(idx)}
+                    aria-label={`Switch to ${item.name}`}
+                  >
+                    <div className="tab-progress-track">
+                      <div
+                        className={`tab-progress-fill ${idx === activeSlide && !isHovered ? 'is-running' : ''}`}
+                      ></div>
+                    </div>
+                    <div className="tab-label-row">
+                      <span className="tab-number">0{idx + 1}</span>
+                      <span className="tab-name">{item.name.split(' ')[0]}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Flagship Visual Showcase Frame */}
-        <div
-          className="hero-media-wrapper hero-animate-media"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {/* Main Visual Image Frame */}
-          <div className="hero-image-frame">
-            {featuredProjects.map((item, index) => (
-              <div
-                key={item.id}
-                className={`hero-slide-item ${index === activeSlide ? 'is-active' : ''}`}
-                aria-hidden={index !== activeSlide}
-              >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="hero-image"
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  onError={handleImageError}
-                />
-                <div className="hero-image-overlay"></div>
-              </div>
-            ))}
-
-            {/* Corner Blueprint Markers */}
-            <div className="hero-frame-corner top-left" aria-hidden="true">+</div>
-            <div className="hero-frame-corner top-right" aria-hidden="true">+</div>
-            <div className="hero-frame-corner bottom-left" aria-hidden="true">+</div>
-            <div className="hero-frame-corner bottom-right" aria-hidden="true">+</div>
-
-            {/* Floating Glassmorphic Spec Badge */}
-            <div className="hero-floating-badge">
-              <div className="badge-header">
-                <span className="badge-live-pulse"></span>
-                <span className="badge-code">{currentProj.code}</span>
-                <span className="badge-tag-pill">{currentProj.tag}</span>
-              </div>
-              <h4 className="badge-proj-title">{currentProj.name}</h4>
-              <div className="badge-meta-row">
-                <span className="badge-location">{currentProj.location}</span>
-                <span className="badge-divider">•</span>
-                <span className="badge-metric"><strong>{currentProj.stat}</strong> {currentProj.statLabel}</span>
-              </div>
+      {/* Bottom Integrated Architecture Metrics HUD Strip */}
+      <div className="hero-bottom-specs-strip">
+        <div className="container specs-container">
+          <div className="spec-metric-card">
+            <div className="spec-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
             </div>
-
-            {/* Slide Navigation Selectors */}
-            <div className="hero-slide-controls">
-              {featuredProjects.map((item, idx) => (
-                <button
-                  key={item.id}
-                  className={`hero-slide-btn ${idx === activeSlide ? 'is-active' : ''}`}
-                  onClick={() => setActiveSlide(idx)}
-                  aria-label={`View ${item.name}`}
-                >
-                  <div className="slide-btn-progress-track">
-                    <div
-                      className={`slide-btn-progress-fill ${idx === activeSlide && !isHovered ? 'is-animating' : ''}`}
-                    ></div>
-                  </div>
-                  <div className="slide-btn-text">
-                    <span className="slide-btn-num">0{idx + 1}</span>
-                    <span className="slide-btn-title">{item.name.split('/')[0]}</span>
-                  </div>
-                </button>
-              ))}
+            <div className="spec-text-block">
+              <span className="spec-metric-number">150+</span>
+              <span className="spec-metric-label">Megastructures Realized</span>
             </div>
           </div>
 
-          {/* Quick Specifications Strip */}
-          <div className="hero-quick-specs">
-            <div className="quick-spec-item">
-              <div className="spec-icon-wrap">
-                <svg className="spec-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <div className="spec-details">
-                <span className="spec-label">PORTFOLIO</span>
-                <span className="spec-val">150+ Megastructures Delivered</span>
-              </div>
+          <div className="spec-metric-card">
+            <div className="spec-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
             </div>
-
-            <div className="quick-spec-item">
-              <div className="spec-icon-wrap">
-                <svg className="spec-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l4 2" />
-                </svg>
-              </div>
-              <div className="spec-details">
-                <span className="spec-label">DESIGN LIFESPAN</span>
-                <span className="spec-val">100+ Years Guaranteed</span>
-              </div>
+            <div className="spec-text-block">
+              <span className="spec-metric-number">100+ Yrs</span>
+              <span className="spec-metric-label">Engineered Durability</span>
             </div>
+          </div>
 
-            <div className="quick-spec-item">
-              <div className="spec-icon-wrap">
-                <svg className="spec-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-              </div>
-              <div className="spec-details">
-                <span className="spec-label">FABRICATION TOLERANCE</span>
-                <span className="spec-val">±0.02 mm CNC Precision</span>
-              </div>
+          <div className="spec-metric-card">
+            <div className="spec-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
             </div>
+            <div className="spec-text-block">
+              <span className="spec-metric-number">±0.02 mm</span>
+              <span className="spec-metric-label">CNC Machining Precision</span>
+            </div>
+          </div>
 
-            <div className="quick-spec-item">
-              <div className="spec-icon-wrap">
-                <svg className="spec-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                </svg>
-              </div>
-              <div className="spec-details">
-                <span className="spec-label">MATERIAL CIRCULARITY</span>
-                <span className="spec-val">98.4% Recycled Structural Steel</span>
-              </div>
+          <div className="spec-metric-card">
+            <div className="spec-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+            </div>
+            <div className="spec-text-block">
+              <span className="spec-metric-number">98.4%</span>
+              <span className="spec-metric-label">Circular Recycled Steel</span>
             </div>
           </div>
         </div>
