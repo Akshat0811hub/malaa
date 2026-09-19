@@ -42,6 +42,15 @@ export default function AboutPage() {
     <div className="page-about" ref={revealRef}>
       {/* Page Header */}
       <section className="page-hero-banner">
+        <div className="page-hero-banner-bg">
+          <img
+            src={aboutbanner}
+            alt="Mala Roll Forming Machine Manufacturing Facility Bawana Delhi"
+            className="page-hero-banner-img"
+            onError={handleImageError}
+          />
+          <div className="page-hero-banner-scrim"></div>
+        </div>
         <div className="container">
           <div className="page-hero-content reveal">
             <span className="eyebrow-label">ABOUT MALA ROLL FORMING • MALA ENGG. WORKS</span>
@@ -50,8 +59,8 @@ export default function AboutPage() {
               Manufactured in Bawana, Delhi
             </h1>
             <p className="page-lead">
-              Operating from J-43, Sec-3, Bawana Industrial Area, Mala Roll Forming engineers high-speed,<br className="desktop-br" />
-              heavy-gauge roll forming lines and industrial cutters for non-stop commercial production.
+              Operating from J-43, Sec-3, Bawana Industrial Area, Delhi, Mala Roll Forming engineers<br className="desktop-br" />
+              high-speed roll forming lines and industrial cutters for non-stop commercial production.
             </p>
           </div>
         </div>

@@ -88,35 +88,359 @@
   transform: translateX(4px);
 }
 
-/* Studio Coordinates */
-.footer-studios {
+/* Factory Coordinates & Contact Details */
+.footer-contact-details {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.studio-entry {
+.footer-contact-block {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
 }
 
-.studio-city {
-  font-size: 0.9rem;
-  font-weight: 600;
+.contact-block-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--near-black);
 }
 
-.studio-addr {
+.footer-contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
   font-size: 0.85rem;
   color: var(--medium-gray);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
-.studio-phone {
-  font-family: var(--font-technical);
-  font-size: 0.82rem;
-  color: var(--dark-charcoal);
+.footer-contact-link:hover {
+  color: var(--near-black);
+  transform: translateX(3px);
+}
+
+.footer-contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
   margin-top: 2px;
+  color: var(--dark-charcoal);
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-link:hover .footer-contact-icon {
+  color: var(--active-red);
+}
+
+/* Sales Desk Header & Badge */
+.contact-desk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.contact-live-pill {
+  font-family: var(--font-technical);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #15803d;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+/* Primary Phone Card */
+.footer-primary-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--off-white);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.footer-primary-phone:hover {
+  background: var(--white);
+  border-color: var(--active-red);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(227, 30, 36, 0.12);
+}
+
+.phone-pulse-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: var(--active-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.footer-primary-phone:hover .phone-pulse-box {
+  background: var(--active-red);
+  color: var(--white);
+  transform: scale(1.06);
+}
+
+.phone-icon-svg {
+  width: 17px;
+  height: 17px;
+}
+
+.phone-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-subtext {
+  font-family: var(--font-technical);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--medium-gray);
+  margin-bottom: 2px;
+}
+
+.phone-digit {
+  font-family: var(--font-technical);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--near-black);
+  letter-spacing: 0.02em;
+}
+
+/* Secondary Phone Grid */
+.footer-phone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.footer-secondary-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  background: var(--off-white);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-family: var(--font-technical);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--dark-charcoal);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.footer-secondary-phone:hover {
+  background: var(--white);
+  border-color: var(--near-black);
+  color: var(--near-black);
+  transform: translateY(-1px);
+}
+
+.phone-tiny-icon {
+  width: 13px;
+  height: 13px;
+  color: var(--medium-gray);
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.footer-secondary-phone:hover .phone-tiny-icon {
+  color: var(--active-red);
+}
+
+/* SOCIAL MEDIA SECTION (Directly below phone numbers) */
+.footer-social-section {
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--near-black);
+}
+
+.social-sublabel {
+  font-family: var(--font-technical);
+  font-size: 0.68rem;
+  color: var(--medium-gray);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Social Icon Buttons Row */
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--off-white);
+  border: 1px solid var(--border-light);
+  color: var(--dark-charcoal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+/* Brand Hover Micro-Interactions */
+.social-btn--wa:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.social-btn--yt:hover {
+  background: #FF0000;
+  border-color: #FF0000;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.35);
+}
+
+.social-btn--ig:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(214, 36, 159, 0.35);
+}
+
+.social-btn--fb:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.35);
+}
+
+.social-btn--in:hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.35);
+}
+
+.social-btn--map:hover {
+  background: #EA4335;
+  border-color: #EA4335;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(234, 67, 53, 0.35);
+}
+
+/* Quick WhatsApp Pill */
+.footer-wa-quick-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #15803d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(22, 163, 74, 0.06);
+}
+
+.footer-wa-quick-pill:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+}
+
+.wa-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: waPulse 1.8s infinite;
+  flex-shrink: 0;
+}
+
+.footer-wa-quick-pill:hover .wa-pulse-dot {
+  background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+}
+
+.wa-quick-text {
+  flex: 1;
+  text-align: left;
+}
+
+.wa-quick-arrow {
+  font-size: 0.85rem;
+  transition: transform var(--transition-fast);
+}
+
+.footer-wa-quick-pill:hover .wa-quick-arrow {
+  transform: translateX(3px);
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
 }
 
 /* Bottom Bar */
@@ -135,19 +459,20 @@
   color: var(--medium-gray);
 }
 
-.footer-socials {
+.footer-bottom-nav {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.social-link {
+.bottom-nav-link {
   font-size: 0.82rem;
   color: var(--medium-gray);
+  text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.social-link:hover {
+.bottom-nav-link:hover {
   color: var(--near-black);
 }
 
@@ -180,8 +505,12 @@
     gap: 16px;
   }
 
-  .footer-socials {
+  .footer-bottom-nav {
     flex-wrap: wrap;
     gap: 14px;
+  }
+
+  .footer-phone-grid {
+    grid-template-columns: 1fr;
   }
 }

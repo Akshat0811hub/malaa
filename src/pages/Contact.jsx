@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import SectionTitle from '../components/Common/SectionTitle';
 import ArrowButton from '../components/Common/ArrowButton';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { handleImageError } from '../utils/imageFallbacks';
+import banner1 from '../assets/banner1.png';
 import './ContactPage.css';
 
 const machineryList = [
@@ -64,6 +66,15 @@ export default function ContactPage() {
     <div className="page-contact" ref={revealRef}>
       {/* Page Header */}
       <section className="page-hero-banner">
+        <div className="page-hero-banner-bg">
+          <img
+            src={banner1}
+            alt="Contact Mala Roll Forming Factory Bawana Delhi"
+            className="page-hero-banner-img"
+            onError={handleImageError}
+          />
+          <div className="page-hero-banner-scrim"></div>
+        </div>
         <div className="container">
           <div className="page-hero-content reveal">
             <span className="eyebrow-label">FACTORY CONTACT & QUOTATION DESK</span>

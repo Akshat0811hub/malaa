@@ -4,6 +4,7 @@ import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
+import banner3 from '../assets/banner 3.png';
 import './ProjectsPage.css';
 
 const detailedProjects = [
@@ -200,6 +201,15 @@ export default function ProjectsPage() {
     <div className="page-projects" ref={revealRef}>
       {/* Page Header */}
       <section className="page-hero-banner">
+        <div className="page-hero-banner-bg">
+          <img
+            src={banner3}
+            alt="Installed Roll Forming Machinery and Production Lines Pan-India"
+            className="page-hero-banner-img"
+            onError={handleImageError}
+          />
+          <div className="page-hero-banner-scrim"></div>
+        </div>
         <div className="container">
           <div className="page-hero-content reveal">
             <span className="eyebrow-label">MACHINE COMMISSIONS • PAN-INDIA</span>

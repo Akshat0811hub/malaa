@@ -203,26 +203,52 @@ ul, ol {
 /* Shared Page Hero Banner (Consistent with Home Header Aesthetic) */
 .page-hero-banner {
   position: relative;
+  min-height: clamp(340px, 45vh, 440px);
+  display: flex;
+  align-items: center;
   padding-top: calc(var(--header-height-normal) + 36px);
-  padding-bottom: 64px;
+  padding-bottom: 56px;
   background-color: #0d0f14;
   color: #ffffff;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
 }
 
-.page-hero-banner::before {
-  content: '';
+.page-hero-banner-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(ellipse at 80% 20%, rgba(227, 30, 36, 0.09) 0%, transparent 60%),
-    linear-gradient(180deg, rgba(13, 15, 20, 0.88) 0%, rgba(13, 15, 20, 0.98) 100%);
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.page-hero-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: contrast(106%) brightness(0.72);
+}
+
+/* Soft, Velvety Dark Scrim Identical to Home Hero */
+.page-hero-banner-scrim {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 13, 17, 0.94) 0%,
+    rgba(11, 13, 17, 0.86) 28%,
+    rgba(11, 13, 17, 0.65) 60%,
+    rgba(11, 13, 17, 0.35) 100%
+  );
+  z-index: 2;
 }
 
 .page-hero-banner::after {
@@ -233,18 +259,19 @@ ul, ol {
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 36px 36px;
-  z-index: 2;
-  opacity: 0.6;
+  z-index: 3;
+  opacity: 0.5;
   pointer-events: none;
 }
 
 .page-hero-content {
   position: relative;
-  z-index: 10;
-  max-width: 980px;
+  z-index: 5;
+  max-width: 1020px;
+  width: 100%;
 }
 
 .page-hero-content .eyebrow-label {
@@ -260,18 +287,18 @@ ul, ol {
 
 .page-hero-content .page-title {
   color: #ffffff;
-  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.18;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
 }
 
 .page-hero-content .page-lead {
   color: #cbd5e1;
-  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
   line-height: 1.68;
-  max-width: 880px;
+  max-width: 960px;
   margin: 0;
 }
 
@@ -280,6 +307,12 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
+  .page-hero-banner {
+    min-height: auto;
+    padding-top: calc(var(--header-height-normal) + 24px);
+    padding-bottom: 40px;
+  }
+
   .desktop-br {
     display: none;
   }

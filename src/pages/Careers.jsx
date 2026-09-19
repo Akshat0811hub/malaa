@@ -4,6 +4,8 @@ import ArrowButton from '../components/Common/ArrowButton';
 import Career from '../components/Career/Career';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { handleImageError } from '../utils/imageFallbacks';
+import careerWallpaper from '../assets/career-wallpaper.jpg';
 import './CareersPage.css';
 
 export default function CareersPage() {
@@ -13,6 +15,15 @@ export default function CareersPage() {
     <div className="page-careers">
       {/* Intro Header */}
       <section className="page-hero-banner" ref={revealRef}>
+        <div className="page-hero-banner-bg">
+          <img
+            src={careerWallpaper}
+            alt="Mala Roll Forming Factory Careers in Bawana Delhi"
+            className="page-hero-banner-img"
+            onError={handleImageError}
+          />
+          <div className="page-hero-banner-scrim"></div>
+        </div>
         <div className="container">
           <div className="page-hero-content reveal">
             <span className="eyebrow-label">JOIN MALA ROLL FORMING // BAWANA SEC-3</span>

@@ -4,6 +4,7 @@ import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
+import banner2 from '../assets/banner 2.png';
 import './ServicesPage.css';
 
 const detailedMachinery = [
@@ -189,6 +190,15 @@ export default function ServicesPage() {
     <div className="page-services" ref={revealRef}>
       {/* Services Hero Header */}
       <section className="page-hero-banner">
+        <div className="page-hero-banner-bg">
+          <img
+            src={banner2}
+            alt="Industrial Roll Forming Machines and Equipment Bawana Delhi"
+            className="page-hero-banner-img"
+            onError={handleImageError}
+          />
+          <div className="page-hero-banner-scrim"></div>
+        </div>
         <div className="container">
           <div className="page-hero-content reveal">
             <span className="eyebrow-label">MANUFACTURING RANGE • BAWANA, DELHI</span>
