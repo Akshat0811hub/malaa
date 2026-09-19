@@ -4,8 +4,9 @@ import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
-import banner2 from '../assets/banner 2.png';
+import banner2 from '../assets/servicebanner.png';
 import './ServicesPage.css';
+
 
 const detailedMachinery = [
   {
@@ -23,7 +24,7 @@ const detailedMachinery = [
       'Schneider / Delta PLC Touch-Screen System with Batch Counting'
     ],
     software: ['EN-31 Hardened Rollers', 'Delta / Schneider PLC', 'Flying Shear Cut', 'Heavy Gear Drive'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '02',
@@ -40,7 +41,7 @@ const detailedMachinery = [
       'EN-31 Vacuum Hardened Tooling Rollers (60–62 HRC)'
     ],
     software: ['Rotary Stitching', 'Auto Punch Press', 'Clip Riveting Unit', 'Digital Length Counter'],
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '03',
@@ -57,7 +58,7 @@ const detailedMachinery = [
       'Heavy Cast Iron / Fabricated Steel Frame Built for Long Duty Life'
     ],
     software: ['HCHCR D2 Blades', 'Hydraulic Power Pack', 'Digital Back Gauge', 'Foot Pedal Control'],
-    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '04',
@@ -74,7 +75,7 @@ const detailedMachinery = [
       'Fast Cycle Time: Under 60 Seconds per Complete Industrial Shutter Spring'
     ],
     software: ['Cam Pitch Control', 'Hardened Feed Rolls', 'High-Torque Reduction', 'Grade II Wire Ready'],
-    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '05',
@@ -91,7 +92,7 @@ const detailedMachinery = [
       'Automated PLC Batch Counter & Pre-Programmed Length Presets'
     ],
     software: ['Anti-Slip Knurling', 'Post-Cut Hydraulic', 'Touchscreen PLC', 'Dual Decoiler'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '06',
@@ -108,7 +109,7 @@ const detailedMachinery = [
       'One-Touch Auto Mode with Manual Inching / Jog Capability'
     ],
     software: ['EN-31 Tooling', 'Heavy Chain Drive', 'Optical Rotary Encoder', 'Hydraulic Station'],
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '07',
@@ -125,7 +126,7 @@ const detailedMachinery = [
       'Synchronized Cut-Off System Aligned Directly with Hole Pitch'
     ],
     software: ['Gang Punch Press', 'Heavy Duty Base', 'CR/HR Strip Ready', 'Hole-Pitch Sync'],
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '08',
@@ -142,7 +143,7 @@ const detailedMachinery = [
       'Straightness Tolerance ≤ 1.0 mm per 3 Meters Length'
     ],
     software: ['EN-31 Rollers', 'Side Guide Stands', 'Wind-Lock Ready', 'Flying Shear'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '09',
@@ -159,7 +160,7 @@ const detailedMachinery = [
       'Delta / Schneider PLC Touch-Screen System with Batch Counter'
     ],
     software: ['Lock Hole Punching', 'Heavy Bottom Plate', 'D3 Die Tooling', 'Helical Gearbox'],
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: '10',
@@ -176,7 +177,7 @@ const detailedMachinery = [
       'Live Material Trial Run & Tolerance Validation at Bawana Before Dispatch'
     ],
     software: ['Flower CAD Design', 'EN-31 / D3 Steel', 'Vacuum Heat Treatment', 'Hard Chrome 25µm'],
-    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop'
+    image: banner2
   }
 ];
 
