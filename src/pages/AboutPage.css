@@ -2,27 +2,8 @@
   background-color: var(--white);
 }
 
-.page-hero-banner {
-  padding-top: calc(var(--header-height-normal) + 56px);
-  padding-bottom: 72px;
-  background-color: var(--off-white);
-  border-bottom: 1px solid var(--border-light);
-}
+/* Page hero banner is styled globally for consistent header look */
 
-.page-hero-content {
-  max-width: 860px;
-}
-
-.page-title {
-  margin-bottom: 24px;
-}
-
-.page-lead {
-  font-size: 1.2rem;
-  line-height: 1.75;
-  color: var(--medium-gray);
-  margin: 0;
-}
 
 /* Philosophy Section */
 .about-philosophy {

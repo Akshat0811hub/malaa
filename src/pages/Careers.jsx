@@ -12,15 +12,15 @@ export default function CareersPage() {
   return (
     <div className="page-careers">
       {/* Intro Header */}
-      <section className="careers-page-hero" ref={revealRef}>
+      <section className="page-hero-banner" ref={revealRef}>
         <div className="container">
-          <div className="careers-hero-content reveal">
+          <div className="page-hero-content reveal">
             <span className="eyebrow-label">JOIN MALA ROLL FORMING // BAWANA SEC-3</span>
-            <h1 className="careers-hero-title">
+            <h1 className="page-title">
               Craft Industrial Excellence.<br />
               Grow With India's Machinery Leaders.
             </h1>
-            <p className="careers-hero-sub">
+            <p className="page-lead">
               From our heavy engineering plant in Bawana Industrial Area, Delhi, we build heavy-duty
               automatic roll forming lines, high-speed PLC flying shears, and hardened EN-31 tooling sets.
               Explore our current vacancies below and submit your application directly online or via WhatsApp.

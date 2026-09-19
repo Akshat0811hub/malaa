@@ -2,52 +2,25 @@
   background-color: var(--white);
 }
 
-.careers-page-hero {
-  padding-top: calc(var(--header-height-normal) + 56px);
-  padding-bottom: 72px;
-  background-color: var(--off-white);
-  border-bottom: 1px solid var(--border-light);
-}
-
-.careers-hero-content {
-  max-width: 900px;
-}
-
-.careers-hero-title {
-  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: -0.03em;
-  color: var(--near-black);
-  margin-top: 14px;
-  margin-bottom: 22px;
-}
-
-.careers-hero-sub {
-  font-size: 1.18rem;
-  line-height: 1.7;
-  color: var(--medium-gray);
-  margin-bottom: 32px;
-}
-
 .careers-hero-stats {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 24px;
 }
 
 .hero-stat-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--white);
-  border: 1px solid var(--border-medium);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--near-black);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .badge-dot {

@@ -200,6 +200,91 @@ ul, ol {
   background-color: var(--near-black);
 }
 
+/* Shared Page Hero Banner (Consistent with Home Header Aesthetic) */
+.page-hero-banner {
+  position: relative;
+  padding-top: calc(var(--header-height-normal) + 36px);
+  padding-bottom: 64px;
+  background-color: #0d0f14;
+  color: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 80% 20%, rgba(227, 30, 36, 0.09) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(13, 15, 20, 0.88) 0%, rgba(13, 15, 20, 0.98) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-hero-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+  z-index: 2;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 980px;
+}
+
+.page-hero-content .eyebrow-label {
+  display: inline-block;
+  color: #ff545a;
+  font-family: var(--font-technical);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.page-hero-content .page-title {
+  color: #ffffff;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+.page-hero-content .page-lead {
+  color: #cbd5e1;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.68;
+  max-width: 880px;
+  margin: 0;
+}
+
+.desktop-br {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .desktop-br {
+    display: none;
+  }
+}
+
 /* Divider Lines */
 .hairline-divider {
   width: 100%;

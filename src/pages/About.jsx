@@ -50,9 +50,8 @@ export default function AboutPage() {
               Manufactured in Bawana, Delhi
             </h1>
             <p className="page-lead">
-              Operating from J-43, Sec-3, Bawana Industrial Area, Mala Roll Forming (Mala Engg. Works)
-              engineers high-speed, heavy-gauge roll forming machines and industrial sheet cutters
-              built for 24×7 non-stop commercial production.
+              Operating from J-43, Sec-3, Bawana Industrial Area, Mala Roll Forming engineers high-speed,<br className="desktop-br" />
+              heavy-gauge roll forming lines and industrial cutters for non-stop commercial production.
             </p>
           </div>
         </div>
