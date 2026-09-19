@@ -115,42 +115,6 @@ export default function AboutPage() {
 
       {/* Interactive Scroll-Brightening Timeline */}
       <Timeline />
-
-      {/* Infrastructure & Technical Capabilities */}
-      <section className="team-section section-padding">
-        <div className="container">
-          <SectionTitle
-            tagline="WORKSHOP INFRASTRUCTURE"
-            title="In-House Engineering Capabilities"
-            description="Our Bawana facility is equipped with heavy CNC machine tools, surface grinders, and trial run setups to deliver turn-key industrial machinery."
-            className="reveal"
-          />
-
-          <div className="team-grid">
-            {manufacturingPillars.map((pillar, idx) => (
-              <div key={pillar.name} className={`team-card reveal delay-${idx + 1}`}>
-                <div className="team-photo-wrap">
-                  <img
-                    src={pillar.image}
-                    alt={pillar.name}
-                    className="team-photo"
-                    loading="lazy"
-                    onError={handleImageError}
-                  />
-                  <div className="team-overlay"></div>
-                </div>
-
-                <div className="team-info">
-                  <h3 className="team-name">{pillar.name}</h3>
-                  <div className="team-role">{pillar.role}</div>
-                  <div className="team-creds">{pillar.credentials}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <CTA />
     </div>
