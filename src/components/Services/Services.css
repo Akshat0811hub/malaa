@@ -202,3 +202,28 @@
     min-height: auto;
   }
 }
+
+/* Services Footer Action & Reveal Animation */
+.services-footer-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+}
+
+.service-card-expanded {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInServiceCard 450ms var(--ease-out-cubic) backwards;
+}
+
+@keyframes fadeInServiceCard {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -4,9 +4,11 @@
 }
 
 .cta-box {
-  background-color: var(--white);
-  border: 1px solid var(--border-light);
+  background-color: #eef1f5;
+  border: 1px solid #d3d9e2;
+  border-radius: 8px;
   position: relative;
+  box-shadow: 0 18px 42px -12px rgba(17, 18, 21, 0.08);
 }
 
 .cta-box-inner {
@@ -22,10 +24,14 @@
 
 .cta-spec-tag {
   font-family: var(--font-technical);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
-  color: var(--medium-gray);
+  color: var(--near-black);
   text-transform: uppercase;
+  background: rgba(17, 18, 21, 0.06);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .cta-heading {
@@ -38,7 +44,7 @@
 
 .cta-lead {
   font-size: 1.12rem;
-  color: var(--medium-gray);
+  color: #4f555e;
   max-width: 680px;
   line-height: 1.7;
   margin-bottom: 36px;
@@ -55,7 +61,7 @@
 .cta-details-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid #d3d9e2;
   padding-top: 32px;
   gap: 24px;
 }

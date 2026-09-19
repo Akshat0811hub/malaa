@@ -13,15 +13,21 @@ import banner3 from '../../assets/banner 3.png';
 const bannerSlides = [
   {
     id: 1,
-    image: banner1
+    image: banner1,
+    title: 'AUTOMATIC ROLLING SHUTTER LINES',
+    subtitle: 'EN-31 Tooling • High-Speed Profiling & Flying Shear'
   },
   {
     id: 2,
-    image: banner2
+    image: banner2,
+    title: 'TEE GRID & CEILING SYSTEMS',
+    subtitle: 'Rotary Stitching • Micro-Tolerance Automated Line'
   },
   {
     id: 3,
-    image: banner3
+    image: banner3,
+    title: 'INDUSTRIAL SHEET CUTTERS & COILERS',
+    subtitle: 'HCHCR D2 Blades • Heavy ISMC Bed Fabrication'
   }
 ];
 
@@ -138,8 +144,8 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Current Project Caption */}
-          <div className="hero-slide-caption">
+          {/* Current Project Caption with smooth transition key */}
+          <div className="hero-slide-caption" key={current.id}>
             <span className="caption-title">
               {current.title}
             </span>

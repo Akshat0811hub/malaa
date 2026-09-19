@@ -261,8 +261,30 @@
 }
 
 .hero-dot-btn.is-active .dot-line {
-  width: 46px;
+  width: 48px;
+  background-color: rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-dot-btn.is-active .dot-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-color: #ffffff;
+  animation: dotProgress 6000ms linear forwards;
+}
+
+@keyframes dotProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .hero-slide-caption {
@@ -271,6 +293,18 @@
   align-items: flex-end;
   text-align: right;
   gap: 3px;
+  animation: fadeInCaption 450ms var(--ease-out-cubic);
+}
+
+@keyframes fadeInCaption {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .caption-title {
@@ -278,12 +312,13 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.04em;
 }
 
 .caption-sub {
   font-family: var(--font-technical);
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }

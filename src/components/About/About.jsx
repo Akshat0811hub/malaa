@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
+import aboutbanner from '../../assets/abouthbanner.png';
 import './About.css';
 
 export default function About() {
@@ -53,7 +54,7 @@ export default function About() {
         <div className="about-media-banner reveal delay-2">
           <div className="about-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop"
+              src={aboutbanner}
               alt="Industrial roll forming machine manufacturing plant in Bawana Delhi"
               className="about-image"
               loading="lazy"
@@ -61,7 +62,7 @@ export default function About() {
             />
             <div className="about-image-caption">
               <span className="caption-tag">MANUFACTURING FACILITY</span>
-              <span className="caption-desc">In-house CNC turning, roller hardening & heavy machine assembly — Bawana Industrial Area, Delhi</span>
+              <span className="caption-desc">In-hous CNC turning, roller hardening & heavy machine assembly — Bawana Industrial Area, Delhi</span>
             </div>
           </div>
 

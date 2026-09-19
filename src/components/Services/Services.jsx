@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../Common/SectionTitle';
 import ArrowButton from '../Common/ArrowButton';
@@ -70,31 +70,45 @@ const servicesData = [
 
 export default function Services() {
   const revealRef = useScrollReveal();
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleServices = showAll ? servicesData : servicesData.slice(0, 3);
+
+  const handleToggle = () => {
+    if (showAll) {
+      setShowAll(false);
+      if (revealRef.current) {
+        if (window.__lenis) {
+          window.__lenis.scrollTo(revealRef.current, { offset: -90, duration: 1.1 });
+        } else {
+          revealRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else {
+      setShowAll(true);
+    }
+  };
 
   return (
     <section className="services-section section-padding" ref={revealRef}>
       <div className="container">
         <SectionTitle
-          tagline="MANUFACTURING RANGE"
+          tagline="OUR SERVICES"
           title="Industrial Roll Forming & Sheet Metal Machines"
           description="Engineered with hardened EN-31 tooling rollers, heavy structural steel beds, and digital PLC controls for maximum output and minimal maintenance."
-          action={
-            <ArrowButton to="/services" variant="outline">
-              View All Machines
-            </ArrowButton>
-          }
           className="reveal"
         />
 
         <div className="services-grid">
-          {servicesData.map((service, index) => (
+          {visibleServices.map((service, index) => (
             <div
               key={service.id}
-              className={`service-card reveal delay-${(index % 3) + 1}`}
+              className={`service-card ${index < 3 ? `reveal delay-${(index % 3) + 1}` : 'service-card-expanded'}`}
+              style={index >= 3 ? { animationDelay: `${(index - 3) * 60}ms` } : undefined}
             >
               <div className="service-card-top">
                 <span className="service-number">{service.id}</span>
-                <span className="service-discipline-tag">DISCIPLINE</span>
+                <span className="service-discipline-tag">SERVICE</span>
               </div>
 
               <div className="service-card-body">
@@ -125,6 +139,12 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="services-footer-action">
+          <ArrowButton variant="outline" onClick={handleToggle}>
+            {showAll ? 'View Less Services' : 'View All Services'}
+          </ArrowButton>
         </div>
       </div>
     </section>

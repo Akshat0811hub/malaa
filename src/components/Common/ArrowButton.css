@@ -10,6 +10,11 @@
   transition: all var(--transition-medium);
   cursor: pointer;
   user-select: none;
+  border-radius: 4px;
+}
+
+.arrow-btn:active {
+  transform: scale(0.97);
 }
 
 .arrow-btn-inner {
@@ -81,6 +86,8 @@
   background-color: var(--near-black);
   color: var(--white);
   border-color: var(--near-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(17, 18, 21, 0.12);
 }
 
 .arrow-btn--outline:hover .arrow-icon-holder {
@@ -103,6 +110,8 @@
   background-color: var(--white);
   color: var(--near-black);
   border-color: var(--near-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(17, 18, 21, 0.12);
 }
 
 .arrow-btn--solid:hover .arrow-icon-holder {
@@ -124,6 +133,8 @@
 .arrow-btn--light-solid:hover {
   background-color: transparent;
   color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.25);
 }
 
 .arrow-btn--light-solid:hover .arrow-icon-holder {

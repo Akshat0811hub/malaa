@@ -30,11 +30,14 @@ export default function Header() {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      window.__lenis?.stop();
     } else {
       document.body.style.overflow = '';
+      window.__lenis?.start();
     }
     return () => {
       document.body.style.overflow = '';
+      window.__lenis?.start();
     };
   }, [mobileMenuOpen]);
 
@@ -43,6 +46,7 @@ export default function Header() {
     { label: 'About', path: '/about' },
     { label: 'Services', path: '/services' },
     { label: 'Projects', path: '/projects' },
+    { label: 'Careers', path: '/careers' },
     { label: 'Contact', path: '/contact' }
   ];
 

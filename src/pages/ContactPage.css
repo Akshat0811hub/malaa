@@ -200,17 +200,19 @@
   width: 100%;
   background-color: var(--off-white);
   border: 1px solid var(--border-light);
+  border-radius: 4px;
   padding: 12px 16px;
   font-family: var(--font-primary);
   font-size: 0.92rem;
   color: var(--near-black);
   outline: none;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .field-input:focus, .field-select:focus, .field-textarea:focus {
-  border-color: var(--near-black);
+  border-color: #e31e24;
   background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.12);
 }
 
 .field-textarea {
@@ -226,9 +228,10 @@
   gap: 14px;
   width: 100%;
   padding: 16px 28px;
-  background-color: var(--white);
-  color: var(--near-black);
-  border: 1px solid var(--near-black);
+  background-color: #e31e24;
+  color: var(--white);
+  border: 1px solid #e31e24;
+  border-radius: 4px;
   font-family: var(--font-primary);
   font-size: 0.86rem;
   font-weight: 600;
@@ -237,6 +240,7 @@
   cursor: pointer;
   margin-top: 8px;
   transition: all var(--transition-medium);
+  box-shadow: 0 4px 16px rgba(227, 30, 36, 0.25);
 }
 
 .intake-submit-btn .submit-arrow {
@@ -246,12 +250,15 @@
 }
 
 .intake-submit-btn:hover:not(:disabled) {
-  background-color: var(--near-black);
+  background-color: #342d6e;
+  border-color: #342d6e;
   color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(17, 18, 21, 0.2);
 }
 
-.intake-submit-btn:hover:not(:disabled) .submit-arrow {
-  transform: translateX(6px);
+.intake-submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
 .intake-submit-btn:disabled {

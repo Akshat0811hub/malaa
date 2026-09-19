@@ -38,12 +38,13 @@
 }
 
 .site-logo-img {
-  height: 58px;
+  height: 88px;
   width: auto;
-  max-width: 210px;
+  max-width: 320px;
   object-fit: contain;
   display: block;
   transition: transform var(--transition-fast), height var(--transition-medium);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
 }
 
 .site-logo:hover .site-logo-img {
@@ -66,9 +67,9 @@
 
 .logo-brand-title {
   font-family: var(--font-primary);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   color: var(--near-black);
   line-height: 1.15;
 }
@@ -126,7 +127,7 @@
 }
 
 .site-header--scrolled .site-logo-img {
-  height: 48px;
+  height: 72px;
 }
 
 /* Desktop Navigation - Modern Elevated Capsule Dock */
@@ -719,8 +720,8 @@
   }
 
   .site-logo-img {
-    height: 44px;
-    max-width: 160px;
+    height: 66px;
+    max-width: 240px;
   }
 }
 

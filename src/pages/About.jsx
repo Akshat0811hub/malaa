@@ -2,9 +2,11 @@ import React from 'react';
 import SectionTitle from '../components/Common/SectionTitle';
 import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
+import Timeline from '../components/Timeline/Timeline';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
 import './AboutPage.css';
+import aboutbanner from '../assets/abouthbanner.png';
 
 const manufacturingPillars = [
   {
@@ -30,29 +32,6 @@ const manufacturingPillars = [
     role: 'Pre-Dispatch Quality Assurance',
     credentials: '±0.5mm Flying Shear Cut // Live Trial Runs',
     image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=800&auto=format&fit=crop'
-  }
-];
-
-const timelineMilestones = [
-  {
-    year: '2000',
-    title: 'Tooling & Die Engineering in Delhi',
-    desc: 'Started as specialized roll tooling engineers, designing progressive roller sets and replacement dies for shutter and sheet metal fabricators.'
-  },
-  {
-    year: '2008',
-    title: 'Bawana Industrial Works Expansion',
-    desc: 'Established our flagship machinery fabrication unit at J-43, Sec-3, Bawana Industrial Area, Delhi, assembling complete automated roll forming lines.'
-  },
-  {
-    year: '2017',
-    title: 'Automated Flying Shear & PLC Integration',
-    desc: 'Integrated high-speed hydraulic flying cutoff technology and Schneider/Delta PLC touchscreen controls, boosting customer production speeds to 20+ m/min.'
-  },
-  {
-    year: '2026',
-    title: 'Pan-India Machinery Supplier',
-    desc: 'Over 500+ roll forming lines running across Delhi NCR, Gujarat, Maharashtra, Rajasthan, UP, Haryana, Punjab, and Southern industrial belts.'
   }
 ];
 
@@ -86,7 +65,7 @@ export default function AboutPage() {
             <div className="philosophy-media reveal">
               <div className="philosophy-image-frame">
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop"
+                  src={aboutbanner}
                   alt="Industrial roll forming machine manufacturing facility in Bawana Delhi"
                   className="philosophy-img"
                   loading="lazy"
@@ -126,28 +105,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline Milestones */}
-      <section className="timeline-section section-padding">
-        <div className="container">
-          <SectionTitle
-            tagline="OUR JOURNEY"
-            title="Over Two Decades of Machinery Manufacturing"
-            description="From specialized roll tooling workshops into one of Delhi's most trusted manufacturers of automatic roll forming and sheet metal processing lines."
-            className="reveal"
-          />
-
-          <div className="timeline-grid">
-            {timelineMilestones.map((m, i) => (
-              <div key={m.year} className={`timeline-card reveal delay-${i + 1}`}>
-                <div className="timeline-year">{m.year}</div>
-                <h4 className="timeline-card-title">{m.title}</h4>
-                <p className="timeline-card-desc">{m.desc}</p>
-                <div className="timeline-hairline"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Interactive Scroll-Brightening Timeline */}
+      <Timeline />
 
       {/* Infrastructure & Technical Capabilities */}
       <section className="team-section section-padding">

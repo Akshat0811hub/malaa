@@ -41,6 +41,7 @@ export default function Footer() {
               <li><Link to="/about" className="footer-link">About Bawana Facility</Link></li>
               <li><Link to="/services" className="footer-link">Machinery Catalog</Link></li>
               <li><Link to="/projects" className="footer-link">Installed Lines & Setups</Link></li>
+              <li><Link to="/careers" className="footer-link">Careers & Vacancies</Link></li>
               <li><Link to="/contact" className="footer-link">Get Instant Factory Quote</Link></li>
             </ul>
           </div>
@@ -92,6 +93,7 @@ export default function Footer() {
 
           <div className="footer-socials">
             <Link to="/contact" className="social-link">Visit Factory</Link>
+            <Link to="/careers" className="social-link">Careers</Link>
             <Link to="/services" className="social-link">Technical Specs</Link>
             <span className="footer-separator">|</span>
             <a href="tel:+919870262404" className="social-link">+91 9870262404</a>

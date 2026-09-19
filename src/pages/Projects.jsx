@@ -185,9 +185,15 @@ export default function ProjectsPage() {
   useEffect(() => {
     if (activeModalProject) {
       document.body.style.overflow = 'hidden';
+      window.__lenis?.stop();
     } else {
       document.body.style.overflow = 'unset';
+      window.__lenis?.start();
     }
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.__lenis?.start();
+    };
   }, [activeModalProject]);
 
   return (

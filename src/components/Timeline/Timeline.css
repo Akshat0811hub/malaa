@@ -1,0 +1,404 @@
+/* ==========================================================================
+   ULTRA-SMOOTH HARDWARE-ACCELERATED TIMELINE
+   ========================================================================== */
+
+.timeline-section {
+  background-color: var(--off-white);
+  border-top: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-interactive-wrapper {
+  position: relative;
+  max-width: 1080px;
+  margin: 64px auto 0;
+  padding: 30px 0 60px;
+}
+
+/* --------------------------------------------------------------------------
+   Central Vertical Spine Track & Glowing Fill
+   -------------------------------------------------------------------------- */
+.timeline-spine-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: #e2e6eb;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.timeline-spine-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #111215 0%, #e31e24 75%, #ff4d52 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 14px rgba(227, 30, 36, 0.6);
+  transform: scaleY(0);
+  transform-origin: top;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.timeline-spine-glow-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  background-color: #ff383e;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 3px rgba(227, 30, 36, 0.9);
+  transform: translate3d(-50%, 0, 0);
+  will-change: transform, opacity;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Milestones List & Items
+   -------------------------------------------------------------------------- */
+.timeline-milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-milestone-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Odd items: card on the left */
+.item--odd {
+  justify-content: flex-start;
+}
+
+.item--odd .timeline-content-card {
+  margin-right: auto;
+  width: 44%;
+}
+
+.item--odd .timeline-connector-line {
+  right: 50%;
+  left: 44%;
+}
+
+/* Even items: card on the right */
+.item--even {
+  justify-content: flex-end;
+}
+
+.item--even .timeline-content-card {
+  margin-left: auto;
+  width: 44%;
+}
+
+.item--even .timeline-connector-line {
+  left: 50%;
+  right: 44%;
+}
+
+/* --------------------------------------------------------------------------
+   Center Milestone Node
+   -------------------------------------------------------------------------- */
+.timeline-node-holder {
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.timeline-node-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid #ced4dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+  will-change: transform, border-color, box-shadow;
+}
+
+.node-center-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ced4dc;
+  transition: background-color 300ms ease;
+}
+
+.node-pulse-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+/* Active Node: Brightens Up! */
+.timeline-milestone-item.is-active .timeline-node-circle {
+  border-color: #e31e24;
+  background-color: var(--white);
+  box-shadow: 0 0 0 5px rgba(227, 30, 36, 0.15), 0 0 18px rgba(227, 30, 36, 0.45);
+  transform: scale(1.12);
+}
+
+.timeline-milestone-item.is-active .node-center-dot {
+  background-color: #e31e24;
+}
+
+.timeline-milestone-item.is-active .node-pulse-ring {
+  border-color: rgba(227, 30, 36, 0.35);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Horizontal Connector Line
+   -------------------------------------------------------------------------- */
+.timeline-connector-line {
+  position: absolute;
+  top: 36px;
+  height: 2px;
+  background-color: #e2e6eb;
+  z-index: 1;
+  transition: background 300ms ease, box-shadow 300ms ease;
+  pointer-events: none;
+}
+
+.timeline-milestone-item.is-active .timeline-connector-line {
+  background: linear-gradient(90deg, #e31e24, #111215);
+}
+
+/* --------------------------------------------------------------------------
+   Milestone Card Styling (Hardware Accelerated Smooth Transitions)
+   -------------------------------------------------------------------------- */
+.timeline-content-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 34px 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px -2px rgba(17, 18, 21, 0.03);
+  opacity: 0.55;
+  transform: translateY(4px);
+  transition: opacity 350ms ease,
+              transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 300ms ease,
+              box-shadow 350ms ease;
+  will-change: opacity, transform;
+}
+
+/* Top Accent Bar inside card */
+.card-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background 300ms ease;
+}
+
+/* Card Brightened State (Active) */
+.timeline-milestone-item.is-active .timeline-content-card {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: #c9d0da;
+  box-shadow: 0 16px 38px -10px rgba(17, 18, 21, 0.09), 0 0 0 1px rgba(227, 30, 36, 0.18);
+}
+
+.timeline-milestone-item.is-active .card-status-bar {
+  background: linear-gradient(90deg, #e31e24, #111215);
+}
+
+.timeline-milestone-item.is-active .timeline-content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px -10px rgba(17, 18, 21, 0.12), 0 0 0 1px rgba(227, 30, 36, 0.28);
+}
+
+/* --------------------------------------------------------------------------
+   Card Internal Typography & Tags
+   -------------------------------------------------------------------------- */
+.card-eyebrow-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.card-era-badge {
+  font-family: var(--font-technical);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.timeline-milestone-item.is-active .card-era-badge {
+  color: var(--near-black);
+}
+
+.card-year-pill {
+  font-family: var(--font-technical);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-charcoal);
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(17, 18, 21, 0.04);
+  border: 1px solid rgba(17, 18, 21, 0.08);
+  transition: color 300ms ease, background 300ms ease, border-color 300ms ease;
+}
+
+.timeline-milestone-item.is-active .card-year-pill {
+  color: #e31e24;
+  background: rgba(227, 30, 36, 0.08);
+  border-color: rgba(227, 30, 36, 0.28);
+}
+
+.card-milestone-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--near-black);
+  margin-bottom: 12px;
+  line-height: 1.32;
+}
+
+.card-milestone-desc {
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: #555a62;
+  margin-bottom: 24px;
+}
+
+.card-tags-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 18px;
+}
+
+.card-metric-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-technical);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--near-black);
+  background: rgba(17, 18, 21, 0.05);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: color 300ms ease, background 300ms ease;
+}
+
+.timeline-milestone-item.is-active .card-metric-tag {
+  background: rgba(227, 30, 36, 0.06);
+  color: #c9181d;
+}
+
+.tag-icon {
+  font-size: 0.76rem;
+}
+
+.card-badge-pill {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--medium-gray);
+  border: 1px solid var(--border-light);
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--white);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout for Tablets and Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .timeline-interactive-wrapper {
+    padding: 20px 0 40px;
+  }
+
+  .timeline-spine-track {
+    left: 24px;
+    transform: none;
+  }
+
+  .timeline-milestones-list {
+    gap: 48px;
+  }
+
+  .timeline-milestone-item {
+    justify-content: flex-start !important;
+  }
+
+  .timeline-node-holder {
+    left: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-connector-line {
+    left: 24px !important;
+    right: auto !important;
+    width: 32px;
+  }
+
+  .item--odd .timeline-content-card,
+  .item--even .timeline-content-card {
+    width: calc(100% - 56px);
+    margin-left: 56px !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-content-card {
+    padding: 26px 20px;
+  }
+
+  .card-milestone-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-eyebrow-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .card-year-pill {
+    font-size: 1.02rem;
+    padding: 2px 8px;
+  }
+}
