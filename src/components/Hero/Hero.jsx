@@ -6,27 +6,22 @@ import './Hero.css';
 
 // Correct image path: banner1.png
 import banner1 from '../../assets/banner1.png';
+import banner2 from '../../assets/banner 2.png';
+import banner3 from '../../assets/banner 3.png';
+
 
 const bannerSlides = [
   {
     id: 1,
-    title: 'Automatic Rolling Shutter Machine',
-    subtitle: 'Shutter Patti, Slat, Bottom Lock Plate & Guide Slide Lines // Bawana, Delhi',
     image: banner1
   },
   {
     id: 2,
-    title: 'Tee Grid Machine & Ceiling Section Line',
-    subtitle: 'Main Tee, Cross Tee, Wall Angle, POP Channel & False Ceiling Roll Forming',
-    image:
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2400&auto=format&fit=crop'
+    image: banner2
   },
   {
     id: 3,
-    title: 'Slotted Angle, Sheet Cutter & Spring Machines',
-    subtitle: 'Heavy Industrial Rack Forming, Hydraulic Shearing & High-Tension Wire Coiling',
-    image:
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop'
+    image: banner3
   }
 ];
 
@@ -103,8 +98,7 @@ export default function Hero() {
           <p className="hero-banner-description hero-animate-3">
             Leading industrial manufacturer of Automatic Rolling Shutter Machines, Tee Grid Lines,
             Sheet Cutters, Spring Machines, Ceiling Section & P.O.P. Machines, Slotted Angle,
-            Shutter Slide & Lock Plate Machines in Bawana Industrial Area, Delhi. Engineered with
-            EN-31 vacuum-hardened rollers and automated PLC touch-screen flying shear cutting.
+            Shutter Slide & Lock Plate Machines in Bawana Industrial Area, Delhi.
           </p>
 
           <div className="hero-banner-buttons hero-animate-4">

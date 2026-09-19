@@ -56,12 +56,9 @@ export default function Header() {
             <div className="logo-text-block">
               <div className="logo-title-row">
                 <span className="logo-brand-title">MALA ROLL FORMING</span>
-                <span className="header-status-indicator" title="Bawana Factory Open For Orders">
-                  <span className="status-ping-dot"></span>
-                  <span className="status-label">BAWANA, DELHI</span>
-                </span>
+                
               </div>
-              <span className="logo-descriptor">MALA ENGG. WORKS • INDUSTRIAL MACHINERY</span>
+              <span className="logo-descriptor">INDUSTRIAL MACHINERY</span>
             </div>
           </Link>
 
