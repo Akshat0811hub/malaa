@@ -38,9 +38,9 @@
 }
 
 .site-logo-img {
-  height: 88px;
+  height: 80px;
   width: auto;
-  max-width: 320px;
+  max-width: 142px;
   object-fit: contain;
   display: block;
   transition: transform var(--transition-fast), height var(--transition-medium);
