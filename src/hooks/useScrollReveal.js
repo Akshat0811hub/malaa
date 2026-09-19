@@ -40,25 +40,44 @@ export function useScrollReveal(options = {}) {
       });
     }, observerOptions);
 
-    const targetElements = [];
-    if (container.matches(selector)) {
-      targetElements.push(container);
-    }
-    container.querySelectorAll(selector).forEach(child => targetElements.push(child));
-
-    // Immediate check for elements already in viewport (above-the-fold or immediate switch)
-    const windowHeight = window.innerHeight;
-    targetElements.forEach(el => {
+    const observeElement = (el) => {
+      if (!el || !(el instanceof Element)) return;
+      if (el.classList.contains('is-revealed')) return;
       const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
       if (rect.top < windowHeight - 20 && rect.bottom > 0) {
         el.classList.add('is-revealed');
       } else {
         observer.observe(el);
       }
+    };
+
+    if (container.matches(selector)) {
+      observeElement(container);
+    }
+    container.querySelectorAll(selector).forEach(observeElement);
+
+    // Watch for dynamically added DOM elements (filtering, tabs, etc.)
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === 1) {
+            if (node.matches && node.matches(selector)) {
+              observeElement(node);
+            }
+            if (node.querySelectorAll) {
+              node.querySelectorAll(selector).forEach(observeElement);
+            }
+          }
+        });
+      });
     });
+
+    mutationObserver.observe(container, { childList: true, subtree: true });
 
     return () => {
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, []);
 
