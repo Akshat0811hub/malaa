@@ -165,10 +165,11 @@
   border-color: var(--near-black);
 }
 
-.chip-btn--active {
-  background-color: var(--near-black);
+.chip-btn--active,
+.chip-btn--active:hover {
+  background-color: #e31e24;
   color: var(--white);
-  border-color: var(--near-black);
+  border-color: #e31e24;
 }
 
 .chip-indicator {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import logoImg from '../../assets/logo-cropped.png';
+import logoImg from '../../assets/logo.png';
 import './Header.css';
 
 export default function Header() {
@@ -48,17 +48,17 @@ export default function Header() {
       <header className={`site-header ${isScrolled ? 'site-header--scrolled' : ''}`}>
         <div className="container header-container">
           {/* Logo Mark */}
-          <Link to="/" className="site-logo" aria-label="MALA Engg. Works Home">
-            <img src={logoImg} alt="MALA Engg. Works" className="site-logo-img" />
+          <Link to="/" className="site-logo" aria-label="Mala Roll Forming Home">
+            <img src={logoImg} alt="Mala Roll Forming Machine Manufacturer" className="site-logo-img" />
             <div className="logo-text-block">
               <div className="logo-title-row">
-                <span className="logo-brand-title">MALA ENGG. WORKS</span>
-                <span className="header-status-indicator" title="Studio Open for Commissions">
+                <span className="logo-brand-title">MALA ROLL FORMING</span>
+                <span className="header-status-indicator" title="Bawana Factory Open For Orders">
                   <span className="status-ping-dot"></span>
-                  <span className="status-label">OPEN</span>
+                  <span className="status-label">BAWANA, DELHI</span>
                 </span>
               </div>
-              <span className="logo-descriptor">ARCHITECTURE & INDUSTRIAL STEEL</span>
+              <span className="logo-descriptor">MALA ENGG. WORKS • INDUSTRIAL MACHINERY</span>
             </div>
           </Link>
 
@@ -83,8 +83,13 @@ export default function Header() {
 
           {/* Header Right Actions */}
           <div className="header-right-actions">
+            <a href="tel:+919870262404" className="header-phone-quick" title="Call Mala Roll Forming Factory">
+              <span className="phone-icon">📞</span>
+              <span className="phone-num">9870262404</span>
+            </a>
+
             <Link to="/contact" className="header-cta-btn">
-              <span className="header-cta-txt">Inquire</span>
+              <span className="header-cta-txt">Get Quote</span>
               <span className="cta-arrow-box">
                 <svg className="cta-arrow" viewBox="0 0 16 12" fill="none">
                   <line x1="1" y1="6" x2="14" y2="6" stroke="currentColor" strokeWidth="1.5" />
@@ -114,10 +119,10 @@ export default function Header() {
         <div className="mobile-drawer-inner">
           <div className="mobile-drawer-header">
             <Link to="/" className="site-logo" onClick={() => setMobileMenuOpen(false)}>
-              <img src={logoImg} alt="MALA Engg. Works" className="site-logo-img" />
+              <img src={logoImg} alt="Mala Roll Forming" className="site-logo-img" />
               <div className="logo-text-block">
-                <span className="logo-brand-title">MALA ENGG. WORKS</span>
-                <span className="logo-descriptor">ARCHITECTURE & STEEL</span>
+                <span className="logo-brand-title">MALA ROLL FORMING</span>
+                <span className="logo-descriptor">MALA ENGG. WORKS • BAWANA</span>
               </div>
             </Link>
             <button
@@ -150,18 +155,26 @@ export default function Header() {
 
           <div className="mobile-drawer-footer">
             <div className="mobile-contact-info">
-              <p className="mobile-contact-label">Direct Studio Inquiries</p>
-              <a href="mailto:inquiry@malaa-group.com" className="mobile-contact-email">
-                inquiry@malaa-group.com
+              <p className="mobile-contact-label">Bawana Factory & Sales Desk</p>
+              <a href="mailto:malaenggworks@gmail.com" className="mobile-contact-email">
+                malaenggworks@gmail.com
               </a>
-              <p className="mobile-contact-phone">+41 44 289 1100</p>
+              <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.88rem' }}>
+                <a href="tel:+919870262404" style={{ color: 'inherit', textDecoration: 'none' }}>📞 +91 9870262404</a>
+                <a href="tel:+919868114107" style={{ color: 'inherit', textDecoration: 'none' }}>📞 +91 9868114107</a>
+                <a href="tel:+919811914107" style={{ color: 'inherit', textDecoration: 'none' }}>📞 +91 9811914107</a>
+                <a href="tel:+919891002404" style={{ color: 'inherit', textDecoration: 'none' }}>📞 +91 9891002404</a>
+              </div>
+              <p style={{ marginTop: '10px', fontSize: '0.82rem', color: '#666' }}>
+                J-43, Sec-3, Bawana Industrial Area, Delhi-110039
+              </p>
             </div>
             <div className="mobile-socials">
-              <span>Zurich</span>
+              <span>Bawana Sec-3</span>
               <span>•</span>
-              <span>Stockholm</span>
+              <span>Delhi</span>
               <span>•</span>
-              <span>New York</span>
+              <span>Pan-India Delivery</span>
             </div>
           </div>
         </div>

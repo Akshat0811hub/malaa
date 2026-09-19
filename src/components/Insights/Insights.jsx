@@ -9,26 +9,26 @@ import './Insights.css';
 const articles = [
   {
     id: 1,
-    category: 'Structural Metallurgy',
-    date: 'February 12, 2026',
-    title: 'Advancements in High-Yield Structural Steels for Megastructures',
-    excerpt: 'Examining how thermo-mechanically controlled rolling processes are transforming load capacity across European infrastructure.',
+    category: 'Machinery Guide',
+    date: 'Industrial Guide',
+    title: 'Automatic Rolling Shutter Machine: Stations, Thickness & Flying Shear Output',
+    excerpt: 'A technical guide on selecting the right roll forming line, station count (12 vs 16 stations), and flying cutter benefits for shutter patti production.',
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop'
   },
   {
     id: 2,
-    category: 'Engineering Analysis',
-    date: 'January 28, 2026',
-    title: 'Algorithmic Optimization in Long-Span Industrial Roof Trusses',
-    excerpt: 'Deploying evolutionary algorithms to reduce truss mass by 28% while simultaneously increasing deflection resistance.',
+    category: 'Tooling Metallurgy',
+    date: 'Tooling Whitepaper',
+    title: 'Why EN-31 & D3 Hardened Rollers Prevent Profile Distortion & Slat Scratching',
+    excerpt: 'Why vacuum hardening to 60–62 HRC and hard chrome plating are essential for handling galvanized and pre-painted sheet coils without roller wear.',
     image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=900&auto=format&fit=crop'
   },
   {
     id: 3,
-    category: 'Circular Construction',
-    date: 'January 14, 2026',
-    title: 'Reversible Mechanical Joints for Industrial Deconstruction',
-    excerpt: 'Developing standardized high-strength friction-grip bolted assemblies for closed-loop lifecycle infrastructure.',
+    category: 'Ceiling & POP Setup',
+    date: 'Setup Advisory',
+    title: 'Starting a False Ceiling T-Grid & POP Channel Manufacturing Unit in India',
+    excerpt: 'Key machinery requirements, rotary stitching mechanisms, power load, and daily production capacity for profitable false ceiling profile supply.',
     image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop'
   }
 ];
@@ -40,12 +40,12 @@ export default function Insights() {
     <section className="insights-section section-padding" ref={revealRef}>
       <div className="container">
         <SectionTitle
-          tagline="LATEST INSIGHTS"
-          title="Research, Publications & Engineering Whitepapers"
-          description="Technical dispatches, metallurgical analyses, and case studies authored by our structural engineering and computational design specialists."
+          tagline="TECHNICAL GUIDES"
+          title="Roll Forming Knowledge & Machine Guides"
+          description="Practical manufacturing guides, tooling steel analyses, and plant setup advice from the engineering team at Mala Roll Forming, Bawana Delhi."
           action={
-            <ArrowButton to="/about" variant="outline">
-              All Articles
+            <ArrowButton to="/services" variant="outline">
+              All Machines
             </ArrowButton>
           }
           className="reveal"

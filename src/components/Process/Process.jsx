@@ -6,27 +6,27 @@ import './Process.css';
 const processSteps = [
   {
     number: '01',
-    title: 'Discover',
-    tagline: 'Site & Geotechnical Diagnostics',
-    description: 'Deep structural assessment, geophysical subsurface analysis, structural payload modeling, and rigorous environmental stress auditing.'
+    title: 'Flower Pattern & CAD Design',
+    tagline: 'Section Geometry & Station Calculation',
+    description: 'We calculate exact strip width, metal springback, and progressive station-by-station forming angles based on sheet material (GI, CR, HR, or Stainless Steel).'
   },
   {
     number: '02',
-    title: 'Design',
-    tagline: 'Parametric Engineering & Tolerances',
-    description: 'Iterative algorithmic load simulations, BIM Level 3 synchronization, seismic resistance optimization, and structural member dimensioning.'
+    title: 'CNC Turning & EN-31 Hardening',
+    tagline: 'Vacuum Heat Treatment & Hard Chrome Finish',
+    description: 'Tooling rollers are precision CNC-turned from certified EN-31 / D3 alloy die steel, vacuum-hardened to 60–62 HRC, and mirror-finished with hard chrome plating.'
   },
   {
     number: '03',
-    title: 'Develop',
-    tagline: 'Robotic Metallurgy Fabrication',
-    description: 'Robotic precision beam milling, submerged-arc automated welding, ultrasonic non-destructive joint verification, and protective alloy cladding.'
+    title: 'Heavy Chassis & Gearbox Drive',
+    tagline: 'Solid Machined Housings & Rigid Frame',
+    description: 'Rollers are mounted on high-grade ground shafts with heavy cast iron or steel stands, powered by reduction gearboxes or heavy-pitch industrial roller chains.'
   },
   {
     number: '04',
-    title: 'Deliver',
-    tagline: 'On-Site Erection & Handover',
-    description: 'Synchronized modular crane logistics, real-time laser alignment tracking, lifecycle monitoring sensor integration, and commissioning.'
+    title: 'Live Coil Trial & Dispatch',
+    tagline: 'Flying Shear Calibration & Testing',
+    description: 'Every machine undergoes live coil trials at our Bawana works to verify profile dimensional tolerance (±0.5mm) and burr-free flying cut before pan-India dispatch.'
   }
 ];
 
@@ -38,9 +38,9 @@ export default function Process() {
     <section className="process-section section-padding" ref={revealRef}>
       <div className="container">
         <SectionTitle
-          tagline="OUR APPROACH"
-          title="Methodical Execution From Concept to Erection"
-          description="A systematic four-phase framework honed over 15 years to guarantee zero variance, absolute structural safety, and timeline precision."
+          tagline="MANUFACTURING WORKFLOW"
+          title="Engineered For Flawless Profile Forming"
+          description="Our methodical 4-stage manufacturing process guarantees precision profile geometry, scratch-free finishes, and reliable long-term production."
           className="reveal"
         />
 

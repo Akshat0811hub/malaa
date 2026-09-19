@@ -13,61 +13,72 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Column 1: Brand Identity & Descriptor */}
           <div className="footer-col footer-col--brand">
-            <Link to="/" className="site-logo footer-logo" aria-label="MALA Engg. Works Home">
-              <img src={logoImg} alt="MALA Engg. Works" className="footer-logo-img" />
+            <Link to="/" className="site-logo footer-logo" aria-label="Mala Roll Forming Home">
+              <img src={logoImg} alt="Mala Roll Forming" className="footer-logo-img" />
               <div className="logo-text-block">
-                <span className="logo-brand-title">MALA ENGG. WORKS</span>
-                <span className="logo-descriptor">ARCHITECTURE & STEEL</span>
+                <span className="logo-brand-title">MALA ROLL FORMING</span>
+                <span className="logo-descriptor">MALA ENGG. WORKS • BAWANA, DELHI</span>
               </div>
             </Link>
             <p className="footer-brand-desc">
-              Pioneering precision structural engineering, high-tensile metallurgy fabrication,
-              and monolithic architectural systems for mission-critical industrial facilities.
+              Premier manufacturer of Automatic Rolling Shutter Machines, Tee Grid Lines,
+              Sheet Cutters, Spring Machines, Ceiling Section, POP Channels, Slotted Angles,
+              Shutter Slides & Lock Plate Machines in Bawana Industrial Area, Delhi.
             </p>
             <div className="footer-cert-tags">
-              <span className="cert-tag">ISO 9001:2015</span>
-              <span className="cert-tag">EN 1090-2 EXC4</span>
-              <span className="cert-tag">SIA 263</span>
+              <span className="cert-tag">EN-31 Hardened Tooling</span>
+              <span className="cert-tag">PLC Flying Shear</span>
+              <span className="cert-tag">Factory Direct Pricing</span>
+              <span className="cert-tag">Pan-India Supply</span>
             </div>
           </div>
 
-          {/* Column 2: Navigation */}
+          {/* Column 2: Quick Links */}
           <div className="footer-col">
-            <h4 className="footer-heading">Navigation</h4>
+            <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
-              <li><Link to="/" className="footer-link">Home Overview</Link></li>
-              <li><Link to="/about" className="footer-link">About the Studio</Link></li>
-              <li><Link to="/services" className="footer-link">Our Expertise</Link></li>
-              <li><Link to="/projects" className="footer-link">Selected Projects</Link></li>
-              <li><Link to="/contact" className="footer-link">Contact & RFP</Link></li>
+              <li><Link to="/" className="footer-link">Home</Link></li>
+              <li><Link to="/about" className="footer-link">About Bawana Facility</Link></li>
+              <li><Link to="/services" className="footer-link">Machinery Catalog</Link></li>
+              <li><Link to="/projects" className="footer-link">Installed Lines & Setups</Link></li>
+              <li><Link to="/contact" className="footer-link">Get Instant Factory Quote</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Disciplines */}
+          {/* Column 3: Machinery Range */}
           <div className="footer-col">
-            <h4 className="footer-heading">Disciplines</h4>
+            <h4 className="footer-heading">Machinery Range</h4>
             <ul className="footer-links">
-              <li><Link to="/services" className="footer-link">Structural Engineering</Link></li>
-              <li><Link to="/services" className="footer-link">Industrial Metallurgy</Link></li>
-              <li><Link to="/services" className="footer-link">Parametric Frameworks</Link></li>
-              <li><Link to="/services" className="footer-link">Construction Oversight</Link></li>
-              <li><Link to="/services" className="footer-link">Forensics & Consulting</Link></li>
+              <li><Link to="/services" className="footer-link">Rolling Shutter Machine</Link></li>
+              <li><Link to="/services" className="footer-link">Tee Grid Machine</Link></li>
+              <li><Link to="/services" className="footer-link">Sheet Cutting Machine</Link></li>
+              <li><Link to="/services" className="footer-link">Spring Coiling Machine</Link></li>
+              <li><Link to="/services" className="footer-link">Ceiling Section & POP Machine</Link></li>
+              <li><Link to="/services" className="footer-link">Slotted Angle Roll Line</Link></li>
+              <li><Link to="/services" className="footer-link">Shutter Slide & Lock Plate</Link></li>
+              <li><Link to="/services" className="footer-link">Custom Tooling & Rollers</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Studios & Coordinates */}
+          {/* Column 4: Factory Coordinates & Contact */}
           <div className="footer-col">
-            <h4 className="footer-heading">Studios</h4>
+            <h4 className="footer-heading">Factory & Office</h4>
             <div className="footer-studios">
               <div className="studio-entry">
-                <span className="studio-city">Zurich (Headquarters)</span>
-                <span className="studio-addr">Bleicherweg 10, 8002 Zurich</span>
-                <span className="studio-phone">+41 44 289 1100</span>
+                <span className="studio-city">Manufacturing Works (Delhi)</span>
+                <span className="studio-addr">J-43, Sec-3, Bawana Industrial Area, Delhi-110039</span>
+                <a href="mailto:malaenggworks@gmail.com" className="studio-phone" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  ✉ malaenggworks@gmail.com
+                </a>
               </div>
-              <div className="studio-entry">
-                <span className="studio-city">Stockholm (Fabrication Center)</span>
-                <span className="studio-addr">Strandvägen 7A, 114 56 Stockholm</span>
-                <span className="studio-phone">+46 8 505 2240</span>
+              <div className="studio-entry" style={{ marginTop: '12px' }}>
+                <span className="studio-city">Sales & Inquiries (Calling & WhatsApp)</span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginTop: '4px' }}>
+                  <a href="tel:+919870262404" className="studio-phone" style={{ textDecoration: 'none', color: 'inherit' }}>📞 +91 9870262404</a>
+                  <a href="tel:+919868114107" className="studio-phone" style={{ textDecoration: 'none', color: 'inherit' }}>📞 +91 9868114107</a>
+                  <a href="tel:+919811914107" className="studio-phone" style={{ textDecoration: 'none', color: 'inherit' }}>📞 +91 9811914107</a>
+                  <a href="tel:+919891002404" className="studio-phone" style={{ textDecoration: 'none', color: 'inherit' }}>📞 +91 9891002404</a>
+                </div>
               </div>
             </div>
           </div>
@@ -76,22 +87,15 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            © {currentYear} MALA Engg. Works / MALAA Structural Group. All rights reserved.
+            © {currentYear} Mala Roll Forming (Mala Engg. Works). All rights reserved. | Bawana Industrial Area, Delhi.
           </div>
 
           <div className="footer-socials">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              LinkedIn
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              Instagram
-            </a>
-            <a href="https://archdaily.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              ArchDaily
-            </a>
+            <Link to="/contact" className="social-link">Visit Factory</Link>
+            <Link to="/services" className="social-link">Technical Specs</Link>
             <span className="footer-separator">|</span>
-            <Link to="/about" className="social-link">Privacy Policy</Link>
-            <Link to="/about" className="social-link">Terms of Engagement</Link>
+            <a href="tel:+919870262404" className="social-link">+91 9870262404</a>
+            <a href="mailto:malaenggworks@gmail.com" className="social-link">Email Us</a>
           </div>
         </div>
       </div>

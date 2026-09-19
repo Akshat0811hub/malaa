@@ -6,53 +6,53 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
 import './AboutPage.css';
 
-const teamMembers = [
+const manufacturingPillars = [
   {
-    name: 'Dr. Arvid Lindholm',
-    role: 'Founding Partner & Chief Structural Engineer',
-    credentials: 'ETH Zurich // Ph.D. Structural Mechanics',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'
+    name: 'CNC Roller Turning & Grinding',
+    role: 'Precision Tooling Fabrication',
+    credentials: '±0.02mm Tolerances // EN-31 & D3 Tool Steel',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
   },
   {
-    name: 'Sophia Bergqvist',
-    role: 'Partner & Head of Structural Metallurgy',
-    credentials: 'KTH Royal Institute // M.Sc. Materials Engineering',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop'
+    name: 'Vacuum Heat Treatment & Hard Chrome',
+    role: 'Tooling Hardening & Anti-Wear Coating',
+    credentials: '60–62 HRC Uniform Hardness // Mirror Finish',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop'
   },
   {
-    name: 'Lukas Steiner',
-    role: 'Director of Computational Engineering & BIM',
-    credentials: 'EPFL Lausanne // Parametric Simulation Lead',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop'
+    name: 'Heavy Structural Chassis Assembly',
+    role: 'Rigid Vibration-Free Machine Bed',
+    credentials: 'Heavy ISMC Channel Base // 40Cr Ground Shafts',
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop'
   },
   {
-    name: 'Astrid Wallin',
-    role: 'Principal Fabrication Architect',
-    credentials: 'Chalmers University // Specialized Timber & Steel',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop'
+    name: 'Live Coil Testing & PLC Calibration',
+    role: 'Pre-Dispatch Quality Assurance',
+    credentials: '±0.5mm Flying Shear Cut // Live Trial Runs',
+    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
 const timelineMilestones = [
   {
-    year: '2011',
-    title: 'Studio Foundation in Zurich',
-    desc: 'Established as an independent structural consulting office specializing in complex Alpine civil cantilevers and high-load bridges.'
+    year: '2000',
+    title: 'Tooling & Die Engineering in Delhi',
+    desc: 'Started as specialized roll tooling engineers, designing progressive roller sets and replacement dies for shutter and sheet metal fabricators.'
   },
   {
-    year: '2016',
-    title: 'Stockholm Metallurgy Hub',
-    desc: 'Commissioned our dedicated heavy fabrication facility in Luleå/Stockholm with robotic plasma cutting and automated submerged arc welding.'
+    year: '2008',
+    title: 'Bawana Industrial Works Expansion',
+    desc: 'Established our flagship machinery fabrication unit at J-43, Sec-3, Bawana Industrial Area, Delhi, assembling complete automated roll forming lines.'
   },
   {
-    year: '2021',
-    title: 'Parametric BIM Integration',
-    desc: 'Pioneered direct-to-fabrication digital workflows, eliminating fabrication translation errors and saving up to 30% in fabrication schedule time.'
+    year: '2017',
+    title: 'Automated Flying Shear & PLC Integration',
+    desc: 'Integrated high-speed hydraulic flying cutoff technology and Schneider/Delta PLC touchscreen controls, boosting customer production speeds to 20+ m/min.'
   },
   {
     year: '2026',
-    title: 'Circular Zero-Carbon Alloy Initiative',
-    desc: 'Standardized 100% reversible mechanical joinery and verified fossil-free steel integration across all new industrial commissions.'
+    title: 'Pan-India Machinery Supplier',
+    desc: 'Over 500+ roll forming lines running across Delhi NCR, Gujarat, Maharashtra, Rajasthan, UP, Haryana, Punjab, and Southern industrial belts.'
   }
 ];
 
@@ -65,14 +65,15 @@ export default function AboutPage() {
       <section className="page-hero-banner">
         <div className="container">
           <div className="page-hero-content reveal">
-            <span className="eyebrow-label">ABOUT MALAA GROUP</span>
+            <span className="eyebrow-label">ABOUT MALA ROLL FORMING • MALA ENGG. WORKS</span>
             <h1 className="page-title">
-              Engineering Structures<br />
-              That Defy Impermanence
+              Heavy-Duty Roll Forming Machinery<br />
+              Manufactured in Bawana, Delhi
             </h1>
             <p className="page-lead">
-              Founded at the intersection of Swiss structural rigor and Scandinavian industrial
-              craftsmanship, MALAA conceives and realizes monumental architectural works engineered to endure.
+              Operating from J-43, Sec-3, Bawana Industrial Area, Mala Roll Forming (Mala Engg. Works)
+              engineers high-speed, heavy-gauge roll forming machines and industrial sheet cutters
+              built for 24×7 non-stop commercial production.
             </p>
           </div>
         </div>
@@ -85,8 +86,8 @@ export default function AboutPage() {
             <div className="philosophy-media reveal">
               <div className="philosophy-image-frame">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
-                  alt="Minimalist architectural facade lines"
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop"
+                  alt="Industrial roll forming machine manufacturing facility in Bawana Delhi"
                   className="philosophy-img"
                   loading="lazy"
                   onError={handleImageError}
@@ -95,29 +96,29 @@ export default function AboutPage() {
             </div>
 
             <div className="philosophy-text reveal delay-2">
-              <span className="eyebrow-label">OUR CORE PHILOSOPHY</span>
+              <span className="eyebrow-label">OUR MANUFACTURING ETHOS</span>
               <h2 className="philosophy-heading">
-                Structure is not merely support — it is the architectural expression.
+                True engineering starts with raw steel, in-house tooling, and zero compromise.
               </h2>
               <p>
-                We reject superficial cosmetic ornamentation in favor of tectonic honesty.
-                By revealing structural mechanics — load paths, moment connections, bracing networks,
-                and material grain — our buildings achieve an authentic monumentality that requires no adornment.
+                Unlike traders who resell machines with uncertain metal quality, Mala Roll Forming designs,
+                machines, hardens, and tests every machine under one roof in Bawana. We control the complete
+                metallurgical workflow — from CAD flower pattern calculation to CNC turning and vacuum hardening.
               </p>
               <p>
-                Every project begins with rigorous analytical modeling. We test thousands of geometric
-                permutations to locate the optimal harmony between structural efficiency, material
-                utilization, and spatial poetry.
+                Every roller set is engineered using certified EN-31 / D3 alloy die steel, heat-treated to
+                60–62 HRC, and hard chrome plated. This ensures our machines form galvanized (GI), cold-rolled (CR),
+                and pre-painted coils without peeling, edge waviness, or roller wear for millions of running meters.
               </p>
 
               <div className="philosophy-stats-grid">
                 <div className="phil-stat">
-                  <span className="phil-stat-num">99.98%</span>
-                  <span className="phil-stat-txt">Fabrication Tolerance Accuracy</span>
+                  <span className="phil-stat-num">60–62 HRC</span>
+                  <span className="phil-stat-txt">Vacuum Hardened Tooling Rollers</span>
                 </div>
                 <div className="phil-stat">
-                  <span className="phil-stat-num">Zero</span>
-                  <span className="phil-stat-txt">Structural Failures in 15+ Years</span>
+                  <span className="phil-stat-num">100%</span>
+                  <span className="phil-stat-txt">In-House Manufacturing at Bawana</span>
                 </div>
               </div>
             </div>
@@ -129,9 +130,9 @@ export default function AboutPage() {
       <section className="timeline-section section-padding">
         <div className="container">
           <SectionTitle
-            tagline="OUR EVOLUTION"
-            title="Fifteen Years of Structural Milestones"
-            description="From a boutique consulting practice into a European structural powerhouse handling multi-thousand-tonne industrial commissions."
+            tagline="OUR JOURNEY"
+            title="Over Two Decades of Machinery Manufacturing"
+            description="From specialized roll tooling workshops into one of Delhi's most trusted manufacturers of automatic roll forming and sheet metal processing lines."
             className="reveal"
           />
 
@@ -148,23 +149,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Infrastructure & Technical Capabilities */}
       <section className="team-section section-padding">
         <div className="container">
           <SectionTitle
-            tagline="EXECUTIVE LEADERSHIP"
-            title="Partners & Structural Directors"
-            description="Engineers and architects with dual backgrounds in computational modeling, industrial metallurgy, and large-scale project delivery."
+            tagline="WORKSHOP INFRASTRUCTURE"
+            title="In-House Engineering Capabilities"
+            description="Our Bawana facility is equipped with heavy CNC machine tools, surface grinders, and trial run setups to deliver turn-key industrial machinery."
             className="reveal"
           />
 
           <div className="team-grid">
-            {teamMembers.map((member, idx) => (
-              <div key={member.name} className={`team-card reveal delay-${idx + 1}`}>
+            {manufacturingPillars.map((pillar, idx) => (
+              <div key={pillar.name} className={`team-card reveal delay-${idx + 1}`}>
                 <div className="team-photo-wrap">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src={pillar.image}
+                    alt={pillar.name}
                     className="team-photo"
                     loading="lazy"
                     onError={handleImageError}
@@ -173,9 +174,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className="team-info">
-                  <h3 className="team-name">{member.name}</h3>
-                  <div className="team-role">{member.role}</div>
-                  <div className="team-creds">{member.credentials}</div>
+                  <h3 className="team-name">{pillar.name}</h3>
+                  <div className="team-role">{pillar.role}</div>
+                  <div className="team-creds">{pillar.credentials}</div>
                 </div>
               </div>
             ))}

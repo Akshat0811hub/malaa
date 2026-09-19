@@ -17,42 +17,42 @@ export default function ImageText() {
               <div className="editorial-media-container">
                 <img
                   src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop"
-                  alt="Heavy structural steel assembly in fabrication plant"
+                  alt="EN-31 hardened roll forming tooling rollers in Bawana Delhi"
                   className="editorial-image"
                   loading="lazy"
                   onError={handleImageError}
                 />
                 <div className="media-overlay"></div>
                 <div className="image-meta-tag">
-                  <span>FACILITY SPEC 09 // HIGH-TENSILE ALLOY MILL</span>
+                  <span>TOOLING SPEC // EN-31 VACUUM HARDENED ROLLERS</span>
                 </div>
               </div>
             </div>
 
             <div className="text-col reveal delay-2">
-              <span className="eyebrow-label">METALLURGY & PRODUCTION</span>
+              <span className="eyebrow-label">TOOLING & DIE PRECISION</span>
               <h2 className="image-text-heading">
-                Extreme Resilience Under Rigorous Loads
+                Zero-Distortion Rollers Engineered From Certified EN-31 Steel
               </h2>
               <p className="image-text-paragraph">
-                Our specialized fabrication facilities process structural grades up to S690QL,
-                delivering load capacities 40% higher than standard structural steel. Every member
-                is shaped using automated multi-axis plasma cutting and stress-relieved via
-                programmable thermal cycles.
+                The heart of every roll forming machine is its tooling. At Mala Roll Forming, our rollers are
+                precision CNC-turned in-house, vacuum heat-treated to 60–62 HRC, and finished with hard chrome
+                plating. This eliminates profile bowing, edge twisting, or surface scratching even when running
+                high-speed galvanized (GI), CR, or pre-painted sheet coils.
               </p>
               <div className="image-text-points">
                 <div className="point-item">
                   <span className="point-num">01</span>
-                  <span className="point-label">Full ultrasonic non-destructive weld testing</span>
+                  <span className="point-label">Progressive flower pattern stations preventing metal stretch & wrinkles</span>
                 </div>
                 <div className="point-item">
                   <span className="point-num">02</span>
-                  <span className="point-label">Certified EN 1090-2 Execution Class 4 compliance</span>
+                  <span className="point-label">60–62 HRC vacuum-hardened tooling rollers for 10+ years operational life</span>
                 </div>
               </div>
               <div className="image-text-cta">
                 <ArrowButton to="/services" variant="textual">
-                  Fabrication Protocols
+                  Explore Machinery Lines
                 </ArrowButton>
               </div>
             </div>
@@ -65,29 +65,29 @@ export default function ImageText() {
         <div className="container">
           <div className="image-text-grid">
             <div className="text-col reveal">
-              <span className="eyebrow-label">CIRCULAR ENGINEERING</span>
+              <span className="eyebrow-label">AUTOMATION & CHASSIS RIGIDITY</span>
               <h2 className="image-text-heading">
-                Decarbonized Architecture & Modular Assembly
+                Heavy Channel Beds & Flying Shear PLC Cut-Off Systems
               </h2>
               <p className="image-text-paragraph">
-                Structural longevity is the ultimate sustainability strategy. By combining
-                fossil-free steel fabrication with reversible mechanical fastening systems,
-                our facilities can be reconfigured, expanded, or completely demounted and
-                recycled at the conclusion of their operational lifespan.
+                We construct our roll forming machine chassis with thick structural channel beds and ground
+                40Cr high-tensile shafts to prevent deflection during non-stop commercial shifts. Synchronized
+                with Schneider / Delta PLC touchscreen panels and optical encoders, the hydraulic flying shear
+                cuts profiles to exact millimeter lengths at full line speed without stopping.
               </p>
               <div className="image-text-points">
                 <div className="point-item">
                   <span className="point-num">01</span>
-                  <span className="point-label">68% reduction in embodied structural carbon</span>
+                  <span className="point-label">PLC touch-screen panel with multi-order batch and length presets</span>
                 </div>
                 <div className="point-item">
                   <span className="point-num">02</span>
-                  <span className="point-label">100% reversible bolt-joint engineering</span>
+                  <span className="point-label">High-speed hydraulic flying cutter with ±1.0mm cutting accuracy</span>
                 </div>
               </div>
               <div className="image-text-cta">
                 <ArrowButton to="/about" variant="textual">
-                  Sustainability Ethos
+                  About Our Bawana Works
                 </ArrowButton>
               </div>
             </div>
@@ -96,14 +96,14 @@ export default function ImageText() {
               <div className="editorial-media-container">
                 <img
                   src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop"
-                  alt="Modern architectural concrete and steel interior geometry"
+                  alt="Industrial machinery assembly line at Mala Engg Works Bawana"
                   className="editorial-image"
                   loading="lazy"
                   onError={handleImageError}
                 />
                 <div className="media-overlay"></div>
                 <div className="image-meta-tag">
-                  <span>CIRCULAR FRAMEWORK // ISO 14044 VALIDATED</span>
+                  <span>CHASSIS & AUTOMATION // 24x7 FACTORY RELIABILITY</span>
                 </div>
               </div>
             </div>

@@ -56,13 +56,16 @@
   width: 100%;
 }
 
-.filter-tab-btn.is-active {
-  color: var(--near-black);
+.filter-tab-btn.is-active,
+.filter-tab-btn.is-active:hover {
+  color: #e31e24;
   font-weight: 600;
 }
 
-.filter-tab-btn.is-active .filter-tab-underline {
+.filter-tab-btn.is-active .filter-tab-underline,
+.filter-tab-btn.is-active:hover .filter-tab-underline {
   width: 100%;
+  background-color: #e31e24;
 }
 
 .archive-count-meta {

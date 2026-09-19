@@ -39,13 +39,15 @@
   color: var(--near-black);
 }
 
-.filter-btn--active {
-  color: var(--near-black);
+.filter-btn--active,
+.filter-btn--active:hover {
+  color: #e31e24;
   font-weight: 600;
 }
 
 .filter-btn--active .filter-line {
   width: 100%;
+  background-color: #e31e24;
 }
 
 /* Editorial Asymmetric Grid */

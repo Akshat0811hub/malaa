@@ -5,27 +5,27 @@ import './Testimonials.css';
 const testimonialsList = [
   {
     id: 1,
-    quote: "Precision, quality, and structural consistency define every complex framework delivered by the MALAA engineering team. Their metallurgical expertise on the Luleå terminal saved us four months of assembly time.",
-    author: "Henrik Lindqvist",
-    title: "Chief Technical Officer",
-    company: "Nordic Smelting & Metallurgy AG",
-    location: "Stockholm"
+    quote: "We installed a 16-station Automatic Rolling Shutter Machine from Mala Roll Forming in Bawana. The EN-31 hardened rollers give completely distortion-free patti profiles even on 1.0mm heavy GI sheet. The PLC flying shear cuts with millimeter precision, running 3+ tonnes daily with zero breakdown.",
+    author: "Rajesh Sharma",
+    title: "Managing Director",
+    company: "Shree Ram Rolling Shutters",
+    location: "Mayapuri Industrial Area, Delhi"
   },
   {
     id: 2,
-    quote: "In thirty years of industrial project development, I have rarely encountered a team that harmonizes structural engineering rigor with architectural clarity so seamlessly.",
-    author: "Elena Rostova-Meier",
-    title: "Head of Infrastructure Development",
-    company: "Alpine Logistics Consortium",
-    location: "Zurich"
+    quote: "Their T-Grid false ceiling machine and POP channel line have been running at our plant for three years now. The rotary stitching and clip punching systems work seamlessly. Whenever we need extra tooling or spare rollers, their Bawana team provides instant factory support.",
+    author: "Amit Patel",
+    title: "Proprietor",
+    company: "Gujarat Ceiling Systems",
+    location: "Ahmedabad, Gujarat"
   },
   {
     id: 3,
-    quote: "Their computational stress simulations and custom cantilever joints allowed us to realize an open-span design that others deemed technically unfeasible.",
-    author: "Marcus Vane",
-    title: "Principal Partner",
-    company: "Studio Vane Architects",
-    location: "Vienna"
+    quote: "Mala Engg. Works supplied us an integrated Slotted Angle machine and a heavy hydraulic sheet shearing machine. The chassis rigidity and continuous gang-punching performance are top notch. Getting direct manufacturer rates with trial runs before dispatch was a great experience.",
+    author: "Vikram Deshmukh",
+    title: "Operations Head",
+    company: "Apex Storage Racks & Shelving",
+    location: "Pune, Maharashtra"
   }
 ];
 

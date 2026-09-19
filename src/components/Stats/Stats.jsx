@@ -4,24 +4,24 @@ import './Stats.css';
 
 const statsData = [
   {
-    value: '15+',
-    label: 'Years Experience',
-    detail: 'Continuous operational excellence across heavy civil & metallurgy sectors'
+    value: '25+',
+    label: 'Years Tooling Heritage',
+    detail: 'Continuous machine building and precision roll tooling engineering in Delhi'
   },
   {
-    value: '120+',
-    label: 'Projects Completed',
-    detail: 'Major structural frameworks engineered and erected on schedule'
+    value: '500+',
+    label: 'Machines Delivered',
+    detail: 'High-output roll forming and sheet cutting lines commissioned pan-India'
   },
   {
-    value: '35+',
-    label: 'Industrial Clients',
-    detail: 'Partnerships with Europe’s leading manufacturing conglomerates'
+    value: '60-62',
+    label: 'HRC Roller Hardness',
+    detail: 'Vacuum heat-treated EN-31 & D3 tooling rollers for scratch-free, long-life production'
   },
   {
-    value: '08',
-    label: 'Countries Served',
-    detail: 'Cross-border engineering offices and active fabrication sites'
+    value: '100%',
+    label: 'In-House Manufacturing',
+    detail: 'Complete CNC machining, assembly, and trial runs at our Bawana works'
   }
 ];
 

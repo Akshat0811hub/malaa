@@ -9,159 +9,159 @@ import './ProjectsPage.css';
 const detailedProjects = [
   {
     id: 'proj-01',
-    title: 'Nordic Metallurgy Plant & Turbine Hall',
-    category: 'Heavy Industry',
+    title: '16-Station Automatic Rolling Shutter Line',
+    category: 'Rolling Shutter Lines',
     year: '2026',
-    location: 'Luleå, Sweden',
-    client: 'Nordic Smelting & Metallurgy AG',
-    tonnage: '14,800 Tonnes',
-    span: '52m Clear Span',
-    steelGrade: 'S460ML / S690QL',
+    location: 'Mayapuri Industrial Area, Delhi',
+    client: 'Shree Ram Rolling Shutters',
+    tonnage: '20 m/min Speed',
+    span: '75mm & 100mm Slat',
+    steelGrade: 'EN-31 Hardened (62 HRC)',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop',
     featured: true,
-    description: 'A 42,000 m² zero-emission smelting and alloy casting facility engineered with modular high-strength steel arches and high-temperature vibration mitigation systems.',
+    description: 'High-speed automated production line for commercial rolling shutter patti / slats with motorized uncoiler, EN-31 hardened tooling rollers, and continuous PLC flying shear cut-off.',
     highlights: [
-      'Subterranean continuous foundation anchoring to Baltic bedrock',
-      'High-velocity pneumatic filtration duct integrate frameworks',
-      'EN 1090-2 Execution Class 4 validated robotic welds'
+      'Continuous production speed up to 20 m/min with zero slat scratching',
+      'Hydraulic flying shear cutoff synchronized via high-resolution optical encoder',
+      'Heavy ISMC channel bed with reduction gearbox transmission for 24×7 commercial duty'
     ]
   },
   {
     id: 'proj-02',
-    title: 'Bregenz Cantilever Logistics Terminal',
-    category: 'Structural Engineering',
+    title: 'False Ceiling T-Grid Automated Line Setup',
+    category: 'False Ceiling Lines',
     year: '2025',
-    location: 'Lake Constance, Austria',
-    client: 'Alpine Logistics Consortium',
-    tonnage: '6,400 Tonnes',
-    span: '38m Cantilever Overhang',
-    steelGrade: 'S355J2W Weathering Steel',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+    location: 'Ahmedabad Industrial Zone, Gujarat',
+    client: 'Gujarat Ceiling Systems',
+    tonnage: '25 m/min Speed',
+    span: 'Main & Cross Tee',
+    steelGrade: 'D3 / EN-31 Tool Steel',
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: '38-meter column-free structural cantilevers supporting multi-tier automated intermodal freight routing over water edge topography.',
+    description: 'Complete automated manufacturing plant for modular false ceiling T-grid profiles with continuous rotary stitching, auto hole punching, and alloy clip insertion.',
     highlights: [
-      'Post-tensioned tie-back cables with active hydraulic tension sensors',
-      'Corrosion resistant C5-M atmospheric coating barrier',
-      'Wind buffet simulation executed via computational fluid dynamics (CFD)'
+      'High-speed rotary stitching disc ensuring tight web seam between body and capping strip',
+      'Automated clip riveting unit delivering 100% secure connection fitment',
+      'Pre-punched hanger wire holes and cross-tee interlocking slots'
     ]
   },
   {
     id: 'proj-03',
-    title: 'Gothenburg Cold-Rolled Assembly Node',
-    category: 'Industrial Complex',
+    title: 'Continuous Slotted Angle Roll Forming Plant',
+    category: 'Racking & Angles',
     year: '2026',
-    location: 'Gothenburg, Sweden',
-    client: 'Vanguard Industrial Automation',
-    tonnage: '9,200 Tonnes',
-    span: '44m Column Grid',
-    steelGrade: 'S355NH Hollow Structural Sections',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
+    location: 'Chakan Industrial Belt, Pune',
+    client: 'Apex Storage Racks & Shelving',
+    tonnage: '15 m/min (Continuous)',
+    span: '40×40 & 50×50mm',
+    steelGrade: 'Heavy HCHCR & EN-31',
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: 'Automated fabrication pavilion constructed with pre-stressed structural steel and high-efficiency thermal insulation enclosures.',
+    description: 'Integrated continuous roll forming line paired with a high-tonnage mechanical gang-punch press for slotted angles used in commercial warehouse storage racks.',
     highlights: [
-      'Overhead 50-tonne gantry crane runway beams aligned to sub-millimeter precision',
-      'BIM Level 3 direct-to-machine fabrication protocol',
-      'Integrated solar thermal envelope with dynamic louvers'
+      'Continuous mechanical gang punch press punching oval and round slots before forming',
+      'Heavy structural steel frame absorbing continuous mechanical press shocks',
+      'Precision hole-to-cut synchronization preventing misaligned shelving holes'
     ]
   },
   {
     id: 'proj-04',
-    title: 'Alpine Renewable Pumped-Storage Infrastructure',
-    category: 'Infrastructure',
+    title: 'P.O.P. Channel & Drywall Stud High-Speed Line',
+    category: 'False Ceiling Lines',
     year: '2025',
-    location: 'Valais, Switzerland',
-    client: 'Swiss Hydro Energy Federation',
-    tonnage: '11,500 Tonnes',
-    span: 'Subterranean Cavern 65m',
-    steelGrade: 'High-Yield Quenched & Tempered Alloy',
+    location: 'Jaipur Industrial Area, Rajasthan',
+    client: 'National Gypsum & Drywall Corp',
+    tonnage: '28 m/min Speed',
+    span: 'POP & Stud Profiles',
+    steelGrade: 'EN-31 Hard Chrome Plated',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
     featured: true,
-    description: 'Monolithic subterranean intake chamber with reinforced steel penstocks engineered to withstand extreme hydrostatic cyclic head pressures.',
+    description: 'High-output drywall gypsum framing line with specialized embossing knurling rollers that imprint anti-slip textures for self-tapping drywall screws.',
     highlights: [
-      'High-pressure penstock bifurcations engineered via finite element plastic analysis',
-      'Rock bolt anchorage into crystalline Alpine granite',
-      'Designed for 120-year operational service lifecycle'
+      'Knurling embossing rollers creating non-slip surface for self-tapping screws',
+      'Dual-cone motorized decoiler for rapid coil changeover and zero downtime',
+      'Hydraulic post-cut die delivering clean 90-degree square cuts without deformation'
     ]
   },
   {
     id: 'proj-05',
-    title: 'Rotterdam Intermodal Maritime Gantry Arch',
-    category: 'Infrastructure',
+    title: 'Rolling Shutter Guide Slide & U-Channel System',
+    category: 'Rolling Shutter Lines',
     year: '2025',
-    location: 'Rotterdam, Netherlands',
-    client: 'EuroPort Terminal Operations',
-    tonnage: '8,100 Tonnes',
-    span: '78m Portal Frame',
-    steelGrade: 'S420ML Structural Plate',
+    location: 'Bawana Industrial Area, Delhi',
+    client: 'North India Shutter Components',
+    tonnage: '18 m/min Speed',
+    span: '65mm, 75mm, 100mm',
+    steelGrade: 'EN-31 Vacuum Hardened',
     image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: 'A monumentally scaled maritime transshipment arch enabling dual container barge handling under high North Sea cross-wind loads.',
+    description: 'Heavy roll forming line dedicated to shutter guide channels and slide rails up to 2.0mm thickness, ensuring parallel edges and smooth shutter travel.',
     highlights: [
-      'Tubular space-truss diagonals with cast steel node joints',
-      'Autonomous ultrasonic strain gauges deployed across nodal coordinates',
-      'Modular floating barge assembly and synchronized crane lifting'
+      'Vertical side-guide stands preventing sideways channel bowing',
+      'Engineered for deep-groove wind-lock guide profiles',
+      'Flying shear cutting die producing clean burr-free ends'
     ]
   },
   {
     id: 'proj-06',
-    title: 'Zurich Precision Robotics & Testing Facility',
-    category: 'Industrial Complex',
+    title: 'Heavy Hydraulic Sheet Shearing Machine Setup',
+    category: 'Shearing & Spring Units',
     year: '2026',
-    location: 'Zurich North, Switzerland',
-    client: 'Helvetia Advanced Mechatronics',
-    tonnage: '4,300 Tonnes',
-    span: '32m Open Laboratory',
-    steelGrade: 'Architectural Exposed Steel (AESS 4)',
+    location: 'Faridabad Industrial Sector, Haryana',
+    client: 'Pinnacle Sheet Metal Fabricators',
+    tonnage: 'Up to 4.0 mm Sheet',
+    span: '2000mm Bed Length',
+    steelGrade: 'HCHCR D2 Reversible Blades',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: 'Ultra-low vibration research complex engineered with tuned mass dampers to isolate micro-robotic calibration from adjacent rail transit vibrations.',
+    description: 'Industrial hydraulic guillotine sheet shearing machine engineered for high-precision, clean cutting of mild steel, galvanized, and stainless steel sheets.',
     highlights: [
-      'Acoustic and kinetic decoupling floating concrete floor slabs',
-      'Architecturally exposed structural steel with invisible connection bolts',
-      'Class 100 cleanroom climate and structural isolation'
+      'HCHCR D2 4-edge reversible shearing blades with minimal rake angle',
+      'Compact low-noise hydraulic power pack with overload protection',
+      'Motorized digital back gauge for quick cut-length adjustment'
     ]
   },
   {
     id: 'proj-07',
-    title: 'Kiruna Arctic Mining Logistics Pavilion',
-    category: 'Metallurgy',
+    title: 'Automatic Rolling Shutter Spring Coiling Unit',
+    category: 'Shearing & Spring Units',
     year: '2024',
-    location: 'Kiruna, Sweden',
-    client: 'LKAB Mineral Extraction',
-    tonnage: '13,200 Tonnes',
-    span: '48m Monolithic Vault',
-    steelGrade: 'Sub-Zero Impact Resistant Grade S355K2',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+    location: 'Ghaziabad Industrial Zone, UP',
+    client: 'Capital Shutter Hardware Works',
+    tonnage: '< 60 Sec / Coil',
+    span: '3.0mm – 8.0mm Wire',
+    steelGrade: 'Hardened Alloy Tooling Cam',
+    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: 'Deep-Arctic ore handling terminal engineered to function continuously at -45°C temperatures under extreme snow and permafrost variations.',
+    description: 'Automatic high-tension wire spring coiling machine delivering uniform pitch and extended fatigue life for rolling shutter counterbalance assemblies.',
     highlights: [
-      'Cryogenic fracture-toughness steel validation testing at -50°C',
-      'Heated structural foundation columns to stabilize permafrost thaw cycles',
-      'Self-shedding parabolic roof contour minimizing heavy snow pack accumulation'
+      'Automatic cam-guided pitch expansion for consistent spring rate',
+      'High-torque reduction gear drive handling heavy Grade-II spring steel wire',
+      'Rapid spring OD diameter adjustment from 50mm to 150mm'
     ]
   },
   {
     id: 'proj-08',
-    title: 'Stuttgart Automated Rail Logistics Shed',
-    category: 'Structural Engineering',
-    year: '2024',
-    location: 'Stuttgart, Germany',
-    client: 'Trans-European Freight Hubs',
-    tonnage: '7,800 Tonnes',
-    span: '60m Long-Span Trusses',
-    steelGrade: 'S355J2 + Hot Dip Galvanized',
-    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop',
+    title: 'Shutter Bottom Lock Plate & Punching Line',
+    category: 'Rolling Shutter Lines',
+    year: '2025',
+    location: 'Ludhiana Industrial Focal Point, Punjab',
+    client: 'Security Shutter Systems Ltd.',
+    tonnage: '15 m/min Speed',
+    span: 'Heavy Bottom Stiffener',
+    steelGrade: 'EN-31 / D3 Tool Steel',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop',
     featured: false,
-    description: 'Continuous dual-track logistics terminal built with parabolic lattice girders, providing unobstructed loading clearance for heavy rolling stock.',
+    description: 'Heavy roll forming line with integrated hydraulic lock-hole punching for bottom shutter plates and interlocking stiffener channels.',
     highlights: [
-      'Lightweight high-efficiency Vierendeel truss systems',
-      'Reversible bolt joinery enabling rapid future expansion',
-      'High-durability zinc corrosion protection engineered for 75-year maintenance-free lifespan'
+      'Hydraulic gang punch unit creating padlock slots and rivet holes',
+      'Heavy structural steel bed ensuring long-term roll alignment',
+      'Delta PLC control panel with automated order quantity presets'
     ]
   }
 ];
 
-const filterCategories = ['All', 'Heavy Industry', 'Structural Engineering', 'Industrial Complex', 'Infrastructure', 'Metallurgy'];
+const filterCategories = ['All', 'Rolling Shutter Lines', 'False Ceiling Lines', 'Racking & Angles', 'Shearing & Spring Units'];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -196,14 +196,14 @@ export default function ProjectsPage() {
       <section className="page-hero-banner">
         <div className="container">
           <div className="page-hero-content reveal">
-            <span className="eyebrow-label">SELECTED PORTFOLIO</span>
+            <span className="eyebrow-label">MACHINE COMMISSIONS • PAN-INDIA</span>
             <h1 className="page-title">
-              Monolithic Structures &<br />
-              Industrial Architecture
+              Installed Machinery &<br />
+              Client Production Lines
             </h1>
             <p className="page-lead">
-              A comprehensive survey of structural frameworks, metallurgy facilities, and heavy
-              infrastructure engineered by MALA Engg. Works across Europe.
+              A comprehensive survey of heavy-duty roll forming machinery, automatic rolling shutter lines,
+              false ceiling systems, and sheet shearing equipment engineered and commissioned across India by Mala Roll Forming.
             </p>
           </div>
         </div>
@@ -227,7 +227,7 @@ export default function ProjectsPage() {
             </div>
 
             <div className="archive-count-meta">
-              <span>Showing {filtered.length} of {detailedProjects.length} Structural Commissions</span>
+              <span>Showing {filtered.length} of {detailedProjects.length} Machinery Installations</span>
             </div>
           </div>
 
@@ -277,11 +277,11 @@ export default function ProjectsPage() {
 
                   <div className="card-specs-bar">
                     <div className="spec-item">
-                      <span className="spec-k">Clear Span</span>
+                      <span className="spec-k">Profile Spec</span>
                       <span className="spec-v">{item.span}</span>
                     </div>
                     <div className="spec-item">
-                      <span className="spec-k">Steel Grade</span>
+                      <span className="spec-k">Tooling Grade</span>
                       <span className="spec-v">{item.steelGrade}</span>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ export default function ProjectsPage() {
             <button
               className="modal-close-btn"
               onClick={() => setActiveModalProject(null)}
-              aria-label="Close Project Detail"
+              aria-label="Close Machine Detail"
             >
               ✕
             </button>
@@ -335,25 +335,25 @@ export default function ProjectsPage() {
                   <span className="meta-val">{activeModalProject.location}</span>
                 </div>
                 <div className="meta-box">
-                  <span className="meta-label">Structural Tonnage</span>
+                  <span className="meta-label">Output Capacity</span>
                   <span className="meta-val">{activeModalProject.tonnage}</span>
                 </div>
                 <div className="meta-box">
-                  <span className="meta-label">Clear Span</span>
+                  <span className="meta-label">Profile Specification</span>
                   <span className="meta-val">{activeModalProject.span}</span>
                 </div>
                 <div className="meta-box">
-                  <span className="meta-label">Specified Metallurgy</span>
+                  <span className="meta-label">Tooling Metallurgy</span>
                   <span className="meta-val">{activeModalProject.steelGrade}</span>
                 </div>
                 <div className="meta-box">
-                  <span className="meta-label">BIM Standards</span>
-                  <span className="meta-val">Level 3 / IFC 4.3 Compliant</span>
+                  <span className="meta-label">Automation Standards</span>
+                  <span className="meta-val">Delta / Schneider PLC</span>
                 </div>
               </div>
 
               <div className="modal-highlights">
-                <h4 className="highlights-heading">Structural Engineering Verification</h4>
+                <h4 className="highlights-heading">Key Technical & Operational Highlights</h4>
                 <ul className="highlights-list">
                   {activeModalProject.highlights.map((h, i) => (
                     <li key={i} className="highlight-item">
@@ -366,7 +366,7 @@ export default function ProjectsPage() {
 
               <div className="modal-actions">
                 <ArrowButton to="/contact" variant="outline">
-                  Inquire For Similar Scope
+                  Inquire For Similar Setup
                 </ArrowButton>
               </div>
             </div>

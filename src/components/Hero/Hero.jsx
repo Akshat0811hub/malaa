@@ -4,24 +4,29 @@ import ArrowButton from '../Common/ArrowButton';
 import { handleImageError } from '../../utils/imageFallbacks';
 import './Hero.css';
 
+// Correct image path: banner1.png
+import banner1 from '../../assets/banner1.png';
+
 const bannerSlides = [
   {
     id: 1,
-    title: 'Luleå Metallurgy Center',
-    subtitle: 'Clear-Span Architecture // Sweden',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2400&auto=format&fit=crop'
+    title: 'Automatic Rolling Shutter Machine',
+    subtitle: 'Shutter Patti, Slat, Bottom Lock Plate & Guide Slide Lines // Bawana, Delhi',
+    image: banner1
   },
   {
     id: 2,
-    title: 'Gothenburg Assembly Complex',
-    subtitle: 'Structural Steel Engineering // Sweden',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2400&auto=format&fit=crop'
+    title: 'Tee Grid Machine & Ceiling Section Line',
+    subtitle: 'Main Tee, Cross Tee, Wall Angle, POP Channel & False Ceiling Roll Forming',
+    image:
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2400&auto=format&fit=crop'
   },
   {
     id: 3,
-    title: 'Stockholm Tower & Monolith',
-    subtitle: 'High-Tensile Glass & Steel // Sweden',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop'
+    title: 'Slotted Angle, Sheet Cutter & Spring Machines',
+    subtitle: 'Heavy Industrial Rack Forming, Hydraulic Shearing & High-Tension Wire Coiling',
+    image:
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop'
   }
 ];
 
@@ -30,30 +35,42 @@ export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const timerRef = useRef(null);
 
+  // Initial animation
   useEffect(() => {
-    const t = setTimeout(() => setIsLoaded(true), 80);
-    return () => clearTimeout(t);
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 80);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  // Autoplay slides smoothly
+  // Autoplay
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % bannerSlides.length);
     }, 6000);
 
-    return () => clearInterval(timerRef.current);
+    return () => {
+      clearInterval(timerRef.current);
+    };
   }, []);
 
   const current = bannerSlides[activeSlide];
 
   return (
-    <section className={`hero-banner-simple ${isLoaded ? 'is-loaded' : ''}`}>
+    <section
+      className={`hero-banner-simple ${
+        isLoaded ? 'is-loaded' : ''
+      }`}
+    >
       {/* Background Architectural Photography Carousel */}
       <div className="hero-banner-bg-wrapper">
         {bannerSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`hero-banner-slide ${index === activeSlide ? 'is-active' : ''}`}
+            className={`hero-banner-slide ${
+              index === activeSlide ? 'is-active' : ''
+            }`}
             aria-hidden={index !== activeSlide}
           >
             <img
@@ -65,7 +82,8 @@ export default function Hero() {
             />
           </div>
         ))}
-        {/* Soft, Velvety Dark Scrim */}
+
+        {/* Dark overlay */}
         <div className="hero-banner-scrim"></div>
       </div>
 
@@ -73,50 +91,68 @@ export default function Hero() {
       <div className="container hero-banner-container">
         <div className="hero-banner-text">
           <span className="hero-banner-eyebrow hero-animate-1">
-            MALA ENGG. WORKS • EST. 2011
+            MALA ROLL FORMING • MALA ENGG. WORKS • BAWANA, DELHI
           </span>
 
           <h1 className="hero-banner-heading hero-animate-2">
-            Engineering Ideas Into<br />
-            <span>Lasting Structures</span>
+            Roll Forming Machine
+            <br />
+            <span>Manufacturer in India</span>
           </h1>
 
           <p className="hero-banner-description hero-animate-3">
-            We conceive, engineer, and construct monumental structures, 
-            high-precision steel facilities, and enduring architectural landmarks.
+            Leading industrial manufacturer of Automatic Rolling Shutter Machines, Tee Grid Lines,
+            Sheet Cutters, Spring Machines, Ceiling Section & P.O.P. Machines, Slotted Angle,
+            Shutter Slide & Lock Plate Machines in Bawana Industrial Area, Delhi. Engineered with
+            EN-31 vacuum-hardened rollers and automated PLC touch-screen flying shear cutting.
           </p>
 
           <div className="hero-banner-buttons hero-animate-4">
-            <ArrowButton to="/projects" variant="light-solid" className="hero-primary-btn">
-              Explore Projects
+            <ArrowButton
+              to="/services"
+              variant="light-solid"
+              className="hero-primary-btn"
+            >
+              Explore Machinery
             </ArrowButton>
+
             <Link to="/contact" className="hero-outline-btn">
-              Contact Us
+              Get Factory Quote
             </Link>
           </div>
         </div>
 
-        {/* Minimal Bottom Info & Slide Indicators */}
+        {/* Bottom Info + Slide Indicators */}
         <div className="hero-banner-footer hero-animate-4">
-          {/* Subtle Slide Indicators */}
+          {/* Slide Indicators */}
           <div className="hero-slide-dots">
             {bannerSlides.map((slide, idx) => (
               <button
                 key={slide.id}
-                className={`hero-dot-btn ${idx === activeSlide ? 'is-active' : ''}`}
+                type="button"
+                className={`hero-dot-btn ${
+                  idx === activeSlide ? 'is-active' : ''
+                }`}
                 onClick={() => setActiveSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
               >
                 <span className="dot-line"></span>
-                <span className="dot-num">0{idx + 1}</span>
+                <span className="dot-num">
+                  0{idx + 1}
+                </span>
               </button>
             ))}
           </div>
 
-          {/* Minimal Project Location in Corner */}
+          {/* Current Project Caption */}
           <div className="hero-slide-caption">
-            <span className="caption-title">{current.title}</span>
-            <span className="caption-sub">{current.subtitle}</span>
+            <span className="caption-title">
+              {current.title}
+            </span>
+
+            <span className="caption-sub">
+              {current.subtitle}
+            </span>
           </div>
         </div>
       </div>

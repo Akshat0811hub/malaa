@@ -4,12 +4,17 @@ import ArrowButton from '../components/Common/ArrowButton';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './ContactPage.css';
 
-const disciplinesList = [
-  'Structural Engineering',
-  'Industrial Heavy Fabrication',
-  'BIM Level 3 Coordination',
-  'Specialized High-Load Solutions',
-  'Structural Forensics & Diagnostics'
+const machineryList = [
+  'Automatic Rolling Shutter Machine',
+  'Tee Grid Machine (Ceiling Line)',
+  'Industrial Sheet Cutter & Shearing Machine',
+  'Rolling Shutter Spring Machine',
+  'Ceiling Section Machine',
+  'P.O.P. Channel Machine',
+  'Slotted Angle Roll Line',
+  'Shutter Slide & Guide Rail',
+  'Lock Plate Machine',
+  'Custom Roll Tooling / Spare Rollers'
 ];
 
 export default function ContactPage() {
@@ -18,23 +23,24 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     location: '',
-    timeline: 'Within 6 Months',
+    timeline: 'Within 1 Month',
     message: ''
   });
 
-  const [selectedDisciplines, setSelectedDisciplines] = useState(['Structural Engineering']);
+  const [selectedMachinery, setSelectedMachinery] = useState(['Automatic Rolling Shutter Machine']);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const toggleDiscipline = (disc) => {
-    if (selectedDisciplines.includes(disc)) {
-      if (selectedDisciplines.length > 1) {
-        setSelectedDisciplines(selectedDisciplines.filter(d => d !== disc));
+  const toggleMachine = (item) => {
+    if (selectedMachinery.includes(item)) {
+      if (selectedMachinery.length > 1) {
+        setSelectedMachinery(selectedMachinery.filter(m => m !== item));
       }
     } else {
-      setSelectedDisciplines([...selectedDisciplines, disc]);
+      setSelectedMachinery([...selectedMachinery, item]);
     }
   };
 
@@ -60,14 +66,14 @@ export default function ContactPage() {
       <section className="page-hero-banner">
         <div className="container">
           <div className="page-hero-content reveal">
-            <span className="eyebrow-label">COMMENCE COLLABORATION</span>
+            <span className="eyebrow-label">FACTORY CONTACT & QUOTATION DESK</span>
             <h1 className="page-title">
-              Direct Studio Intake &<br />
-              Structural RFP Desk
+              Contact Mala Roll Forming<br />
+              Bawana Industrial Works
             </h1>
             <p className="page-lead">
-              Our partners and senior structural directors review all RFPs and engineering
-              inquiries directly. Typical diagnostic feedback is issued within 24 hours.
+              Get direct factory pricing, request custom roller profile flower drawings, or schedule
+              a live machine trial at our factory located at J-43, Sec-3, Bawana Industrial Area, Delhi.
             </p>
           </div>
         </div>
@@ -80,62 +86,63 @@ export default function ContactPage() {
             {/* Left Column: Coordinates, Offices & Protocols */}
             <div className="contact-info-col reveal">
               <div className="studio-block">
-                <span className="studio-type-badge">HEADQUARTERS // SWITZERLAND</span>
-                <h3 className="studio-name">Zurich Design Studio</h3>
+                <span className="studio-type-badge">FACTORY HEADQUARTERS // DELHI</span>
+                <h3 className="studio-name">Mala Roll Forming (Mala Engg. Works)</h3>
                 <p className="studio-address">
-                  Bleicherweg 10, CH-8002 Zurich<br />
-                  Switzerland
+                  J-43, Sec-3, Bawana Industrial Area<br />
+                  Delhi – 110039, India
                 </p>
                 <div className="studio-contact-links">
-                  <a href="tel:+41442891100" className="studio-link">+41 44 289 1100</a>
-                  <a href="mailto:zurich@malaa-group.com" className="studio-link">zurich@malaa-group.com</a>
+                  <a href="tel:+919870262404" className="studio-link">📞 +91 9870262404</a>
+                  <a href="tel:+919868114107" className="studio-link">📞 +91 9868114107</a>
+                  <a href="mailto:malaenggworks@gmail.com" className="studio-link">✉ malaenggworks@gmail.com</a>
                 </div>
               </div>
 
               <div className="studio-block">
-                <span className="studio-type-badge">FABRICATION & METALLURGY // SWEDEN</span>
-                <h3 className="studio-name">Stockholm Assembly Facility</h3>
+                <span className="studio-type-badge">DIRECT SALES & WHATSAPP DESK</span>
+                <h3 className="studio-name">Technical Inquiries & Trials</h3>
                 <p className="studio-address">
-                  Strandvägen 7A, SE-114 56 Stockholm<br />
-                  Sweden (Fabrication Hub Luleå)
+                  Direct calling and WhatsApp support for technical parameters, machine trial bookings, and pan-India dispatch details.
                 </p>
                 <div className="studio-contact-links">
-                  <a href="tel:+4685052240" className="studio-link">+46 8 505 2240</a>
-                  <a href="mailto:stockholm@malaa-group.com" className="studio-link">stockholm@malaa-group.com</a>
+                  <a href="tel:+919811914107" className="studio-link">📞 +91 9811914107</a>
+                  <a href="tel:+919891002404" className="studio-link">📞 +91 9891002404</a>
                 </div>
               </div>
 
               <div className="intake-protocols-card">
-                <h4 className="protocols-title">Confidentiality & Compliance</h4>
+                <h4 className="protocols-title">Direct Factory Assurance</h4>
                 <p className="protocols-text">
-                  All structural blueprints, CAD models, and feasibility specifications submitted
-                  via our intake portal are protected under bilateral non-disclosure protocols.
+                  We invite every buyer to visit our Bawana facility for live machine testing on their own sheet metal coils.
+                  Direct manufacturer rates with complete on-site commissioning and training support.
                 </p>
                 <div className="protocols-tags">
-                  <span className="proto-tag">ISO 27001 Data Security</span>
-                  <span className="proto-tag">Eurocode 3 Compliant</span>
+                  <span className="proto-tag">Live Coil Trials</span>
+                  <span className="proto-tag">Pan-India Delivery</span>
+                  <span className="proto-tag">1-Year Warranty</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: High-Precision RFP Intake Form */}
+            {/* Right Column: Machinery RFQ Intake Form */}
             <div className="contact-form-col reveal delay-2">
               <div className="intake-form-box">
                 {submitted ? (
                   <div className="submission-success-card">
                     <div className="success-icon">✓</div>
-                    <span className="eyebrow-label">DISPATCH CONFIRMED</span>
-                    <h2 className="success-title">Engineering Inquiry Logged</h2>
+                    <span className="eyebrow-label">INQUIRY LOGGED</span>
+                    <h2 className="success-title">Factory Quotation Requested</h2>
                     <p className="success-desc">
-                      Thank you, <strong>{formData.name || 'Client'}</strong>. Your project inquiry has been
-                      registered in our central engineering repository under Reference ID:
+                      Thank you, <strong>{formData.name || 'Customer'}</strong>. Your machinery requirement has been
+                      registered at our Bawana works under Inquiry Reference:
                     </p>
                     <div className="reference-code-badge">
-                      <span>REF: ML-2026-{Math.floor(10000 + Math.random() * 90000)}</span>
+                      <span>REF: MRF-2026-{Math.floor(10000 + Math.random() * 90000)}</span>
                     </div>
                     <p className="success-sub">
-                      A senior project partner will examine the structural scope and respond to{' '}
-                      <strong>{formData.email}</strong> within 24 business hours.
+                      Our machine engineering team will review your specifications and contact you at{' '}
+                      <strong>{formData.email || formData.phone}</strong> with complete technical details and factory pricing within 24 hours.
                     </p>
                     <button
                       className="reset-form-btn"
@@ -144,38 +151,39 @@ export default function ContactPage() {
                         setFormData({
                           name: '',
                           email: '',
+                          phone: '',
                           company: '',
                           location: '',
-                          timeline: 'Within 6 Months',
+                          timeline: 'Within 1 Month',
                           message: ''
                         });
                       }}
                     >
-                      Submit Another Scope
+                      Submit Another Requirement
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="intake-form">
                     <div className="form-header">
-                      <span className="eyebrow-label">PROJECT SPECIFICATION FORM</span>
-                      <h3 className="form-title">Scope & Parameter Intake</h3>
+                      <span className="eyebrow-label">MACHINERY QUOTATION REQUEST</span>
+                      <h3 className="form-title">Select Machines & Parameters</h3>
                     </div>
 
-                    {/* Discipline Multi-Select */}
+                    {/* Machine Multi-Select */}
                     <div className="form-group">
-                      <label className="input-group-label">Required Engineering Disciplines</label>
+                      <label className="input-group-label">Select Required Machinery</label>
                       <div className="discipline-chips">
-                        {disciplinesList.map(disc => {
-                          const isSelected = selectedDisciplines.includes(disc);
+                        {machineryList.map(mach => {
+                          const isSelected = selectedMachinery.includes(mach);
                           return (
                             <button
                               type="button"
-                              key={disc}
+                              key={mach}
                               className={`chip-btn ${isSelected ? 'chip-btn--active' : ''}`}
-                              onClick={() => toggleDiscipline(disc)}
+                              onClick={() => toggleMachine(mach)}
                             >
                               <span className="chip-indicator">{isSelected ? '■' : '□'}</span>
-                              <span className="chip-text">{disc}</span>
+                              <span className="chip-text">{mach}</span>
                             </button>
                           );
                         })}
@@ -193,21 +201,21 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          placeholder="e.g. Henrik Larsson"
+                          placeholder="e.g. Rajesh Sharma"
                           className="field-input"
                         />
                       </div>
 
                       <div className="form-field">
-                        <label htmlFor="email" className="field-label">Corporate Email *</label>
+                        <label htmlFor="phone" className="field-label">Phone / WhatsApp Number *</label>
                         <input
-                          id="email"
-                          name="email"
-                          type="email"
+                          id="phone"
+                          name="phone"
+                          type="tel"
                           required
-                          value={formData.email}
+                          value={formData.phone}
                           onChange={handleChange}
-                          placeholder="h.larsson@industry.com"
+                          placeholder="e.g. +91 9870262404"
                           className="field-input"
                         />
                       </div>
@@ -215,51 +223,67 @@ export default function ContactPage() {
 
                     <div className="form-row-2">
                       <div className="form-field">
-                        <label htmlFor="company" className="field-label">Organization / Firm *</label>
+                        <label htmlFor="email" className="field-label">Email Address *</label>
                         <input
-                          id="company"
-                          name="company"
-                          type="text"
+                          id="email"
+                          name="email"
+                          type="email"
                           required
-                          value={formData.company}
+                          value={formData.email}
                           onChange={handleChange}
-                          placeholder="e.g. Nordic Structural Group"
+                          placeholder="e.g. rajesh@shutterworks.com"
                           className="field-input"
                         />
                       </div>
 
                       <div className="form-field">
-                        <label htmlFor="location" className="field-label">Proposed Site Location</label>
+                        <label htmlFor="company" className="field-label">Company / Workshop Name</label>
                         <input
-                          id="location"
-                          name="location"
+                          id="company"
+                          name="company"
                           type="text"
-                          value={formData.location}
+                          value={formData.company}
                           onChange={handleChange}
-                          placeholder="City, Country"
+                          placeholder="e.g. Shree Ram Rolling Shutters"
                           className="field-input"
                         />
                       </div>
                     </div>
 
-                    <div className="form-field">
-                      <label htmlFor="timeline" className="field-label">Anticipated Schedule</label>
-                      <select
-                        id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleChange}
-                        className="field-select"
-                      >
-                        <option value="Immediate / Emergency Review">Immediate / Emergency Review</option>
-                        <option value="Within 3 Months">Within 3 Months</option>
-                        <option value="Within 6 Months">Within 6 Months</option>
-                        <option value="2027 Project Planning">2027 Project Planning</option>
-                      </select>
+                    <div className="form-row-2">
+                      <div className="form-field">
+                        <label htmlFor="location" className="field-label">Your Factory Location / City *</label>
+                        <input
+                          id="location"
+                          name="location"
+                          type="text"
+                          required
+                          value={formData.location}
+                          onChange={handleChange}
+                          placeholder="e.g. Delhi, Jaipur, Ahmedabad, Pune"
+                          className="field-input"
+                        />
+                      </div>
+
+                      <div className="form-field">
+                        <label htmlFor="timeline" className="field-label">Purchase Timeline</label>
+                        <select
+                          id="timeline"
+                          name="timeline"
+                          value={formData.timeline}
+                          onChange={handleChange}
+                          className="field-select"
+                        >
+                          <option value="Immediate (Ready Stock / Running Line)">Immediate (Ready Stock / Running Line)</option>
+                          <option value="Within 1 Month">Within 1 Month</option>
+                          <option value="Within 2–3 Months">Within 2–3 Months</option>
+                          <option value="New Plant Project Planning">New Plant Project Planning</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div className="form-field">
-                      <label htmlFor="message" className="field-label">Structural Scope & Technical Requirements *</label>
+                      <label htmlFor="message" className="field-label">Machine Specifications & Profile Requirements *</label>
                       <textarea
                         id="message"
                         name="message"
@@ -267,7 +291,7 @@ export default function ContactPage() {
                         rows="4"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Detail expected tonnage, spans, environmental conditions, or BIM integration expectations..."
+                        placeholder="Detail required profile type (e.g. 75mm shutter slat, T-grid, POP channel, slotted angle), coil thickness (e.g. 0.8mm GI), power supply, and target daily output..."
                         className="field-textarea"
                       ></textarea>
                     </div>
@@ -277,7 +301,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="intake-submit-btn"
                     >
-                      <span>{isSubmitting ? 'Transmitting Scope...' : 'Transmit Project Specification'}</span>
+                      <span>{isSubmitting ? 'Submitting Inquiry...' : 'Request Direct Factory Quotation'}</span>
                       <svg className="submit-arrow" viewBox="0 0 36 12" fill="none">
                         <line x1="1" y1="6" x2="33" y2="6" stroke="currentColor" strokeWidth="1.4" />
                         <path d="M29 2L33 6L29 10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="square" />
@@ -295,34 +319,34 @@ export default function ContactPage() {
       <section className="faq-section section-padding">
         <div className="container">
           <SectionTitle
-            tagline="ENGAGEMENT PROTOCOLS"
-            title="Intake & Commissioning FAQ"
-            description="Clear expectations regarding structural feasibility diagnostics, procurement phases, and fabrication timelines."
+            tagline="BUYER FAQ"
+            title="Machinery Procurement & Factory Trials"
+            description="Clear answers regarding factory visits, coil trial testing, payment options, and pan-India machinery transport."
             className="reveal"
           />
 
           <div className="faq-grid">
             <div className="faq-card reveal delay-1">
               <span className="faq-num">01</span>
-              <h4 className="faq-title">What is the typical timeframe for structural analysis?</h4>
+              <h4 className="faq-title">Can I visit the Bawana factory to see live machine trials?</h4>
               <p className="faq-text">
-                Preliminary finite element feasibility reviews are typically delivered in 5–10 business days. Full certified Eurocode 3 calculation packages vary with scale, typically requiring 3–6 weeks.
+                Yes, absolutely! We welcome all prospective buyers to visit our facility at J-43, Sec-3, Bawana Industrial Area, Delhi-110039. You can inspect machines under fabrication and test running machines with your own sample coils.
               </p>
             </div>
 
             <div className="faq-card reveal delay-2">
               <span className="faq-num">02</span>
-              <h4 className="faq-title">Do you accept international fabrication commissions?</h4>
+              <h4 className="faq-title">Do you deliver and install machines across India?</h4>
               <p className="faq-text">
-                Yes. While our primary fabrication plants are located in Sweden, we coordinate logistics, rail delivery, and certified on-site assembly supervision across Europe and worldwide.
+                Yes. We handle pan-India dispatch and logistics coordination. Our commissioning technicians can be deputed to your factory to install, align the machine, and provide complete operational training to your operators.
               </p>
             </div>
 
             <div className="faq-card reveal delay-3">
               <span className="faq-num">03</span>
-              <h4 className="faq-title">Can you integrate with existing architect BIM models?</h4>
+              <h4 className="faq-title">What is the warranty and spare parts availability?</h4>
               <p className="faq-text">
-                Yes. We operate directly within Revit, Tekla, and IFC 4 open standard workflows, maintaining real-time bi-directional synchronization with lead architects and general contractors.
+                All machines come with a 1-year warranty on critical mechanical components. Since all EN-31 rollers, shafts, and cutters are manufactured directly in our Bawana works, replacement spares and extra profile tooling are readily available.
               </p>
             </div>
           </div>

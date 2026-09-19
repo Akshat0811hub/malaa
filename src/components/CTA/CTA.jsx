@@ -12,42 +12,42 @@ export default function CTA() {
         <div className="cta-box reveal">
           <div className="cta-box-inner">
             <div className="cta-eyebrow">
-              <span className="eyebrow-label">COMMENCE COLLABORATION</span>
-              <span className="cta-spec-tag">CONFIDENTIAL RFP & DESIGN INTAKE</span>
+              <span className="eyebrow-label">DIRECT FACTORY INTAKE • BAWANA, DELHI</span>
+              <span className="cta-spec-tag">LIVE TRIAL RUNS BEFORE DISPATCH</span>
             </div>
 
             <h2 className="cta-heading">
-              Let's Build Something<br />
-              Remarkable.
+              Ready to Upgrade Your<br />
+              Roll Forming Production?
             </h2>
 
             <p className="cta-lead">
-              From exploratory engineering feasibility through to turnkey fabrication and high-risk
-              assembly, our partners work directly with senior structural directors.
+              Contact Mala Roll Forming (Mala Engg. Works) today for direct manufacturer pricing,
+              custom profile tooling designs, or to schedule a live machine demonstration at our Bawana works.
             </p>
 
             <div className="cta-button-group">
               <ArrowButton to="/contact" variant="outline">
-                Get In Touch
+                Request Factory Quote
               </ArrowButton>
-              <ArrowButton to="/projects" variant="textual">
-                View Project Index
+              <ArrowButton to="/services" variant="textual">
+                View All Machinery
               </ArrowButton>
             </div>
 
             {/* Micro Details */}
             <div className="cta-details-strip">
               <div className="cta-detail-item">
-                <span className="detail-tag">AVERAGE RESPONSE TIME</span>
-                <span className="detail-value">&lt; 24 Hours via Zurich Studio</span>
+                <span className="detail-tag">FACTORY LOCATION</span>
+                <span className="detail-value">J-43, Sec-3, Bawana Industrial Area, Delhi</span>
               </div>
               <div className="cta-detail-item">
-                <span className="detail-tag">STANDARD SPECIFICATION</span>
-                <span className="detail-value">Eurocode 3 & SIA 263 Compliant</span>
+                <span className="detail-tag">DIRECT CALL / WHATSAPP</span>
+                <span className="detail-value">+91 9870262404 / 9868114107</span>
               </div>
               <div className="cta-detail-item">
-                <span className="detail-tag">DIRECT INTAKE DESK</span>
-                <span className="detail-value">+41 44 289 1100</span>
+                <span className="detail-tag">EMAIL DESK</span>
+                <span className="detail-value">malaenggworks@gmail.com</span>
               </div>
             </div>
           </div>

@@ -9,47 +9,47 @@ import './Projects.css';
 const projectsList = [
   {
     id: 1,
-    title: 'Nordic Metallurgy Plant & Turbine Hall',
-    category: 'Heavy Industry',
+    title: '16-Station Automatic Rolling Shutter Line',
+    category: 'Rolling Shutter Lines',
     year: '2026',
-    location: 'Luleå, Sweden',
-    layout: 'large', // editorial layout flag
+    location: 'Delhi NCR Industrial Hub',
+    layout: 'large',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop',
-    excerpt: 'A 42,000 m² zero-emission smelting and alloy casting facility engineered with modular high-strength steel arches.'
+    excerpt: 'Continuous automated roll forming line producing 75mm & 100mm shutter patti / slats with EN-31 hardened rollers and hydraulic flying shear cut-off.'
   },
   {
     id: 2,
-    title: 'Bregenz Cantilever Logistics Terminal',
-    category: 'Structural Engineering',
+    title: 'False Ceiling T-Grid & Section Plant',
+    category: 'Ceiling & POP Lines',
     year: '2025',
-    location: 'Lake Constance, Austria',
+    location: 'Ahmedabad, Gujarat',
     layout: 'medium',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
-    excerpt: '38-meter column-free structural cantilevers supporting multi-tier automated intermodal freight routing.'
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
+    excerpt: 'High-precision ceiling line producing Main Tee, Cross Tee, and intermediate knurled channels with rotary stitching and auto clip punch.'
   },
   {
     id: 3,
-    title: 'Gothenburg Cold-Rolled Assembly Node',
-    category: 'Industrial Complex',
+    title: 'Continuous Slotted Angle Racking Line',
+    category: 'Storage & Racks',
     year: '2026',
-    location: 'Gothenburg, Sweden',
+    location: 'Pune, Maharashtra',
     layout: 'medium',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
-    excerpt: 'Automated fabrication pavilion constructed with pre-stressed structural steel and high-efficiency thermal insulation.'
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+    excerpt: 'Heavy-duty 40x40mm & 50x50mm slotted angle roll forming line with continuous mechanical gang punching press for industrial shelving.'
   },
   {
     id: 4,
-    title: 'Alpine Renewable Pumped-Storage Infrastructure',
-    category: 'Infrastructure',
+    title: 'Hydraulic Sheet Cutter & Spring Coiler Unit',
+    category: 'Industrial Shearing',
     year: '2025',
-    location: 'Valais, Switzerland',
+    location: 'Jaipur, Rajasthan',
     layout: 'wide',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
-    excerpt: 'Monolithic subterranean intake chamber with subterranean reinforced concrete tunnels designed for high-head hydraulic loads.'
+    excerpt: 'Heavy 4mm hydraulic sheet metal shearing machine paired with an automatic rolling shutter tension spring coiling machine for commercial shutters.'
   }
 ];
 
-const categories = ['All', 'Heavy Industry', 'Structural Engineering', 'Industrial Complex', 'Infrastructure'];
+const categories = ['All', 'Rolling Shutter Lines', 'Ceiling & POP Lines', 'Storage & Racks', 'Industrial Shearing'];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -63,9 +63,9 @@ export default function Projects() {
     <section className="projects-section section-padding" ref={revealRef}>
       <div className="container">
         <SectionTitle
-          tagline="SELECTED PROJECTS"
-          title="Architectural Precision at Industrial Scale"
-          description="A curated selection of our most demanding structural and architectural commissions delivered across Scandinavia and Central Europe."
+          tagline="FACTORY COMMISSIONS"
+          title="Installed Machinery & Production Lines Across India"
+          description="A survey of heavy-duty roll forming machinery, automatic shutter lines, and ceiling section setups built at our Bawana works and running at client factories."
           action={
             <ArrowButton to="/projects" variant="outline">
               Full Archive

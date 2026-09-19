@@ -126,10 +126,11 @@
   color: var(--near-black);
 }
 
-.tab-btn--active {
-  color: var(--near-black);
+.tab-btn--active,
+.tab-btn--active:hover {
+  color: #e31e24;
   font-weight: 600;
-  border-bottom-color: var(--near-black);
+  border-bottom-color: #e31e24;
 }
 
 .arrow-controls {

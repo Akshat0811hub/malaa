@@ -81,12 +81,13 @@
   transform: translateX(0);
 }
 
-.nav-discipline-btn.is-active {
-  background-color: var(--near-black);
+.nav-discipline-btn.is-active,
+.nav-discipline-btn.is-active:hover {
+  background-color: #e31e24;
 }
 
 .nav-discipline-btn.is-active .btn-num {
-  color: var(--accent-badge);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .nav-discipline-btn.is-active .btn-title {
