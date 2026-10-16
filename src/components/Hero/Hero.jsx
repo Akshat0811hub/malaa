@@ -4,28 +4,33 @@ import ArrowButton from '../Common/ArrowButton';
 import { handleImageError } from '../../utils/imageFallbacks';
 import './Hero.css';
 
-// Correct image path: banner1.png
-import banner1 from '../../assets/banner1.png';
-import banner2 from '../../assets/banner 2.png';
-import banner3 from '../../assets/banner 3.png';
-
+import bannerChatgpt from '../../assets/banner-chatgpt.jpeg';
+import bannerAdvanced from '../../assets/banner-rolling-shutter-advanced.png';
+import bannerSolutions from '../../assets/banner-solutions.png';
+import bannerShearing from '../../assets/sheet-shearing-machine.jpg';
 
 const bannerSlides = [
   {
     id: 1,
-    image: banner1,
+    image: bannerChatgpt,
     title: 'AUTOMATIC ROLLING SHUTTER LINES',
     subtitle: 'EN-31 Tooling • High-Speed Profiling & Flying Shear'
   },
   {
     id: 2,
-    image: banner2,
-    title: 'TEE GRID & CEILING SYSTEMS',
-    subtitle: 'Rotary Stitching • Micro-Tolerance Automated Line'
+    image: bannerAdvanced,
+    title: 'HIGH-SPEED SHUTTER PATTI SYSTEMS',
+    subtitle: 'Heavy Gear Drive • Continuous Slat Production'
   },
   {
     id: 3,
-    image: banner3,
+    image: bannerSolutions,
+    title: 'CUSTOM ROLL FORMING LINES',
+    subtitle: 'Precision Engineered Machinery • Bawana Works'
+  },
+  {
+    id: 4,
+    image: bannerShearing,
     title: 'INDUSTRIAL SHEET CUTTERS & COILERS',
     subtitle: 'HCHCR D2 Blades • Heavy ISMC Bed Fabrication'
   }

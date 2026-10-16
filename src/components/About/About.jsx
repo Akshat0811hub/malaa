@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
-import aboutbanner from '../../assets/abouthbanner.png';
+import facilityBanner from '../../assets/facility-overview.jpg';
 import './About.css';
 
 export default function About() {
@@ -54,7 +54,7 @@ export default function About() {
         <div className="about-media-banner reveal delay-2">
           <div className="about-image-wrap">
             <img
-              src={aboutbanner}
+              src={facilityBanner}
               alt="Industrial roll forming machine manufacturing plant in Bawana Delhi"
               className="about-image"
               loading="lazy"

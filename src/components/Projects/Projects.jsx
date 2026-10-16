@@ -4,6 +4,10 @@ import SectionTitle from '../Common/SectionTitle';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
+import bannerRollingShutter from '../../assets/banner-rolling-shutter.png';
+import ceilingTgrid from '../../assets/ceiling-tgrid-machine.jpg';
+import bannerPrecision from '../../assets/banner-precision-built.png';
+import sheetShearing from '../../assets/sheet-shearing-machine.jpg';
 import './Projects.css';
 
 const projectsList = [
@@ -14,7 +18,7 @@ const projectsList = [
     year: '2026',
     location: 'Delhi NCR Industrial Hub',
     layout: 'large',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop',
+    image: bannerRollingShutter,
     excerpt: 'Continuous automated roll forming line producing 75mm & 100mm shutter patti / slats with EN-31 hardened rollers and hydraulic flying shear cut-off.'
   },
   {
@@ -24,7 +28,7 @@ const projectsList = [
     year: '2025',
     location: 'Ahmedabad, Gujarat',
     layout: 'medium',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
+    image: ceilingTgrid,
     excerpt: 'High-precision ceiling line producing Main Tee, Cross Tee, and intermediate knurled channels with rotary stitching and auto clip punch.'
   },
   {
@@ -34,7 +38,7 @@ const projectsList = [
     year: '2026',
     location: 'Pune, Maharashtra',
     layout: 'medium',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+    image: bannerPrecision,
     excerpt: 'Heavy-duty 40x40mm & 50x50mm slotted angle roll forming line with continuous mechanical gang punching press for industrial shelving.'
   },
   {
@@ -44,7 +48,7 @@ const projectsList = [
     year: '2025',
     location: 'Jaipur, Rajasthan',
     layout: 'wide',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
+    image: sheetShearing,
     excerpt: 'Heavy 4mm hydraulic sheet metal shearing machine paired with an automatic rolling shutter tension spring coiling machine for commercial shutters.'
   }
 ];

@@ -3,7 +3,7 @@ import SectionTitle from '../components/Common/SectionTitle';
 import ArrowButton from '../components/Common/ArrowButton';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
-import banner1 from '../assets/banner1.png';
+import bannerRollingShutter from '../assets/banner-rolling-shutter.png';
 import './ContactPage.css';
 
 const machineryList = [
@@ -68,7 +68,7 @@ export default function ContactPage() {
       <section className="page-hero-banner">
         <div className="page-hero-banner-bg">
           <img
-            src={banner1}
+            src={bannerRollingShutter}
             alt="Contact Mala Roll Forming Factory Bawana Delhi"
             className="page-hero-banner-img"
             onError={handleImageError}

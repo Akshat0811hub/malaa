@@ -4,9 +4,14 @@ import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
-import banner2 from '../assets/servicebanner.png';
+import bannerAdvanced from '../assets/banner-rolling-shutter-advanced.png';
+import bannerChatgpt from '../assets/banner-chatgpt.jpeg';
+import ceilingTgrid from '../assets/ceiling-tgrid-machine.jpg';
+import sheetShearing from '../assets/sheet-shearing-machine.jpg';
+import bannerPrecision from '../assets/banner-precision-built.png';
+import machineHydraulic from '../assets/machine-hydraulic-forming.png';
+import bannerSolutions from '../assets/banner-solutions.png';
 import './ServicesPage.css';
-
 
 const detailedMachinery = [
   {
@@ -24,7 +29,7 @@ const detailedMachinery = [
       'Schneider / Delta PLC Touch-Screen System with Batch Counting'
     ],
     software: ['EN-31 Hardened Rollers', 'Delta / Schneider PLC', 'Flying Shear Cut', 'Heavy Gear Drive'],
-    image: banner2
+    image: bannerChatgpt
   },
   {
     id: '02',
@@ -41,7 +46,7 @@ const detailedMachinery = [
       'EN-31 Vacuum Hardened Tooling Rollers (60–62 HRC)'
     ],
     software: ['Rotary Stitching', 'Auto Punch Press', 'Clip Riveting Unit', 'Digital Length Counter'],
-    image: banner2
+    image: ceilingTgrid
   },
   {
     id: '03',
@@ -58,7 +63,7 @@ const detailedMachinery = [
       'Heavy Cast Iron / Fabricated Steel Frame Built for Long Duty Life'
     ],
     software: ['HCHCR D2 Blades', 'Hydraulic Power Pack', 'Digital Back Gauge', 'Foot Pedal Control'],
-    image: banner2
+    image: sheetShearing
   },
   {
     id: '04',
@@ -75,7 +80,7 @@ const detailedMachinery = [
       'Fast Cycle Time: Under 60 Seconds per Complete Industrial Shutter Spring'
     ],
     software: ['Cam Pitch Control', 'Hardened Feed Rolls', 'High-Torque Reduction', 'Grade II Wire Ready'],
-    image: banner2
+    image: sheetShearing
   },
   {
     id: '05',
@@ -92,7 +97,7 @@ const detailedMachinery = [
       'Automated PLC Batch Counter & Pre-Programmed Length Presets'
     ],
     software: ['Anti-Slip Knurling', 'Post-Cut Hydraulic', 'Touchscreen PLC', 'Dual Decoiler'],
-    image: banner2
+    image: ceilingTgrid
   },
   {
     id: '06',
@@ -109,7 +114,7 @@ const detailedMachinery = [
       'One-Touch Auto Mode with Manual Inching / Jog Capability'
     ],
     software: ['EN-31 Tooling', 'Heavy Chain Drive', 'Optical Rotary Encoder', 'Hydraulic Station'],
-    image: banner2
+    image: ceilingTgrid
   },
   {
     id: '07',
@@ -126,7 +131,7 @@ const detailedMachinery = [
       'Synchronized Cut-Off System Aligned Directly with Hole Pitch'
     ],
     software: ['Gang Punch Press', 'Heavy Duty Base', 'CR/HR Strip Ready', 'Hole-Pitch Sync'],
-    image: banner2
+    image: bannerPrecision
   },
   {
     id: '08',
@@ -143,7 +148,7 @@ const detailedMachinery = [
       'Straightness Tolerance ≤ 1.0 mm per 3 Meters Length'
     ],
     software: ['EN-31 Rollers', 'Side Guide Stands', 'Wind-Lock Ready', 'Flying Shear'],
-    image: banner2
+    image: machineHydraulic
   },
   {
     id: '09',
@@ -160,7 +165,7 @@ const detailedMachinery = [
       'Delta / Schneider PLC Touch-Screen System with Batch Counter'
     ],
     software: ['Lock Hole Punching', 'Heavy Bottom Plate', 'D3 Die Tooling', 'Helical Gearbox'],
-    image: banner2
+    image: machineHydraulic
   },
   {
     id: '10',
@@ -177,7 +182,7 @@ const detailedMachinery = [
       'Live Material Trial Run & Tolerance Validation at Bawana Before Dispatch'
     ],
     software: ['Flower CAD Design', 'EN-31 / D3 Steel', 'Vacuum Heat Treatment', 'Hard Chrome 25µm'],
-    image: banner2
+    image: bannerSolutions
   }
 ];
 
@@ -208,7 +213,7 @@ export default function ServicesPage() {
       <section className="page-hero-banner">
         <div className="page-hero-banner-bg">
           <img
-            src={banner2}
+            src={bannerAdvanced}
             alt="Industrial Roll Forming Machines and Equipment Bawana Delhi"
             className="page-hero-banner-img"
             onError={handleImageError}

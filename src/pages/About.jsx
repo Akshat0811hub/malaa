@@ -5,33 +5,37 @@ import CTA from '../components/CTA/CTA';
 import Timeline from '../components/Timeline/Timeline';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
+import facilityBanner from '../assets/facility-overview.jpg';
+import machineHydraulic from '../assets/machine-hydraulic-forming.png';
+import bannerPrecision from '../assets/banner-precision-built.png';
+import bannerRollingShutter from '../assets/banner-rolling-shutter.png';
+import bannerChatgpt from '../assets/banner-chatgpt.jpeg';
 import './AboutPage.css';
-import aboutbanner from '../assets/abouthbanner.png';
 
 const manufacturingPillars = [
   {
     name: 'CNC Roller Turning & Grinding',
     role: 'Precision Tooling Fabrication',
     credentials: '±0.02mm Tolerances // EN-31 & D3 Tool Steel',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop'
+    image: bannerPrecision
   },
   {
     name: 'Vacuum Heat Treatment & Hard Chrome',
     role: 'Tooling Hardening & Anti-Wear Coating',
     credentials: '60–62 HRC Uniform Hardness // Mirror Finish',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop'
+    image: bannerRollingShutter
   },
   {
     name: 'Heavy Structural Chassis Assembly',
     role: 'Rigid Vibration-Free Machine Bed',
     credentials: 'Heavy ISMC Channel Base // 40Cr Ground Shafts',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop'
+    image: machineHydraulic
   },
   {
     name: 'Live Coil Testing & PLC Calibration',
     role: 'Pre-Dispatch Quality Assurance',
     credentials: '±0.5mm Flying Shear Cut // Live Trial Runs',
-    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=800&auto=format&fit=crop'
+    image: bannerChatgpt
   }
 ];
 
@@ -44,7 +48,7 @@ export default function AboutPage() {
       <section className="page-hero-banner">
         <div className="page-hero-banner-bg">
           <img
-            src={aboutbanner}
+            src={facilityBanner}
             alt="Mala Roll Forming Machine Manufacturing Facility Bawana Delhi"
             className="page-hero-banner-img"
             onError={handleImageError}
@@ -73,7 +77,7 @@ export default function AboutPage() {
             <div className="philosophy-media reveal">
               <div className="philosophy-image-frame">
                 <img
-                  src={aboutbanner}
+                  src={machineHydraulic}
                   alt="Industrial roll forming machine manufacturing facility in Bawana Delhi"
                   className="philosophy-img"
                   loading="lazy"

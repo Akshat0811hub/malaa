@@ -4,6 +4,9 @@ import SectionTitle from '../Common/SectionTitle';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
+import bannerRollingShutter from '../../assets/banner-rolling-shutter.png';
+import bannerPrecision from '../../assets/banner-precision-built.png';
+import ceilingTgrid from '../../assets/ceiling-tgrid-machine.jpg';
 import './Insights.css';
 
 const articles = [
@@ -13,7 +16,7 @@ const articles = [
     date: 'Industrial Guide',
     title: 'Automatic Rolling Shutter Machine: Stations, Thickness & Flying Shear Output',
     excerpt: 'A technical guide on selecting the right roll forming line, station count (12 vs 16 stations), and flying cutter benefits for shutter patti production.',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop'
+    image: bannerRollingShutter
   },
   {
     id: 2,
@@ -21,7 +24,7 @@ const articles = [
     date: 'Tooling Whitepaper',
     title: 'Why EN-31 & D3 Hardened Rollers Prevent Profile Distortion & Slat Scratching',
     excerpt: 'Why vacuum hardening to 60–62 HRC and hard chrome plating are essential for handling galvanized and pre-painted sheet coils without roller wear.',
-    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=900&auto=format&fit=crop'
+    image: bannerPrecision
   },
   {
     id: 3,
@@ -29,7 +32,7 @@ const articles = [
     date: 'Setup Advisory',
     title: 'Starting a False Ceiling T-Grid & POP Channel Manufacturing Unit in India',
     excerpt: 'Key machinery requirements, rotary stitching mechanisms, power load, and daily production capacity for profitable false ceiling profile supply.',
-    image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=900&auto=format&fit=crop'
+    image: ceilingTgrid
   }
 ];
 

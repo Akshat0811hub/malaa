@@ -2,6 +2,8 @@ import React from 'react';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
+import bannerPrecision from '../../assets/banner-precision-built.png';
+import machineHydraulic from '../../assets/machine-hydraulic-forming.png';
 import './ImageText.css';
 
 export default function ImageText() {
@@ -16,7 +18,7 @@ export default function ImageText() {
             <div className="image-col reveal">
               <div className="editorial-media-container">
                 <img
-                  src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop"
+                  src={bannerPrecision}
                   alt="EN-31 hardened roll forming tooling rollers in Bawana Delhi"
                   className="editorial-image"
                   loading="lazy"
@@ -95,7 +97,7 @@ export default function ImageText() {
             <div className="image-col reveal delay-2">
               <div className="editorial-media-container">
                 <img
-                  src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop"
+                  src={machineHydraulic}
                   alt="Industrial machinery assembly line at Mala Engg Works Bawana"
                   className="editorial-image"
                   loading="lazy"

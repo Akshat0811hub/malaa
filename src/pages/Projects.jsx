@@ -4,7 +4,13 @@ import ArrowButton from '../components/Common/ArrowButton';
 import CTA from '../components/CTA/CTA';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { handleImageError } from '../utils/imageFallbacks';
-import banner3 from '../assets/banner 3.png';
+import bannerSolutions from '../assets/banner-solutions.png';
+import bannerChatgpt from '../assets/banner-chatgpt.jpeg';
+import ceilingTgrid from '../assets/ceiling-tgrid-machine.jpg';
+import bannerPrecision from '../assets/banner-precision-built.png';
+import machineHydraulic from '../assets/machine-hydraulic-forming.png';
+import sheetShearing from '../assets/sheet-shearing-machine.jpg';
+import bannerRollingShutter from '../assets/banner-rolling-shutter.png';
 import './ProjectsPage.css';
 
 const detailedProjects = [
@@ -18,7 +24,7 @@ const detailedProjects = [
     tonnage: '20 m/min Speed',
     span: '75mm & 100mm Slat',
     steelGrade: 'EN-31 Hardened (62 HRC)',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop',
+    image: bannerChatgpt,
     featured: true,
     description: 'High-speed automated production line for commercial rolling shutter patti / slats with motorized uncoiler, EN-31 hardened tooling rollers, and continuous PLC flying shear cut-off.',
     highlights: [
@@ -37,7 +43,7 @@ const detailedProjects = [
     tonnage: '25 m/min Speed',
     span: 'Main & Cross Tee',
     steelGrade: 'D3 / EN-31 Tool Steel',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop',
+    image: ceilingTgrid,
     featured: false,
     description: 'Complete automated manufacturing plant for modular false ceiling T-grid profiles with continuous rotary stitching, auto hole punching, and alloy clip insertion.',
     highlights: [
@@ -56,7 +62,7 @@ const detailedProjects = [
     tonnage: '15 m/min (Continuous)',
     span: '40×40 & 50×50mm',
     steelGrade: 'Heavy HCHCR & EN-31',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop',
+    image: bannerPrecision,
     featured: false,
     description: 'Integrated continuous roll forming line paired with a high-tonnage mechanical gang-punch press for slotted angles used in commercial warehouse storage racks.',
     highlights: [
@@ -75,7 +81,7 @@ const detailedProjects = [
     tonnage: '28 m/min Speed',
     span: 'POP & Stud Profiles',
     steelGrade: 'EN-31 Hard Chrome Plated',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
+    image: ceilingTgrid,
     featured: true,
     description: 'High-output drywall gypsum framing line with specialized embossing knurling rollers that imprint anti-slip textures for self-tapping drywall screws.',
     highlights: [
@@ -94,7 +100,7 @@ const detailedProjects = [
     tonnage: '18 m/min Speed',
     span: '65mm, 75mm, 100mm',
     steelGrade: 'EN-31 Vacuum Hardened',
-    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop',
+    image: machineHydraulic,
     featured: false,
     description: 'Heavy roll forming line dedicated to shutter guide channels and slide rails up to 2.0mm thickness, ensuring parallel edges and smooth shutter travel.',
     highlights: [
@@ -113,7 +119,7 @@ const detailedProjects = [
     tonnage: 'Up to 4.0 mm Sheet',
     span: '2000mm Bed Length',
     steelGrade: 'HCHCR D2 Reversible Blades',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
+    image: sheetShearing,
     featured: false,
     description: 'Industrial hydraulic guillotine sheet shearing machine engineered for high-precision, clean cutting of mild steel, galvanized, and stainless steel sheets.',
     highlights: [
@@ -132,7 +138,7 @@ const detailedProjects = [
     tonnage: '< 60 Sec / Coil',
     span: '3.0mm – 8.0mm Wire',
     steelGrade: 'Hardened Alloy Tooling Cam',
-    image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200&auto=format&fit=crop',
+    image: sheetShearing,
     featured: false,
     description: 'Automatic high-tension wire spring coiling machine delivering uniform pitch and extended fatigue life for rolling shutter counterbalance assemblies.',
     highlights: [
@@ -151,7 +157,7 @@ const detailedProjects = [
     tonnage: '15 m/min Speed',
     span: 'Heavy Bottom Stiffener',
     steelGrade: 'EN-31 / D3 Tool Steel',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop',
+    image: bannerRollingShutter,
     featured: false,
     description: 'Heavy roll forming line with integrated hydraulic lock-hole punching for bottom shutter plates and interlocking stiffener channels.',
     highlights: [
@@ -203,7 +209,7 @@ export default function ProjectsPage() {
       <section className="page-hero-banner">
         <div className="page-hero-banner-bg">
           <img
-            src={banner3}
+            src={bannerSolutions}
             alt="Installed Roll Forming Machinery and Production Lines Pan-India"
             className="page-hero-banner-img"
             onError={handleImageError}
