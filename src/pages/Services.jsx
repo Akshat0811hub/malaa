@@ -11,6 +11,17 @@ import sheetShearing from '../assets/sheet-shearing-machine.jpg';
 import bannerPrecision from '../assets/banner-precision-built.png';
 import machineHydraulic from '../assets/machine-hydraulic-forming.png';
 import bannerSolutions from '../assets/banner-solutions.png';
+import industrialRollingShutter from '../assets/Industrial Rolling Shutter Machine Solutions.png';
+import automaticRollingShutter from '../assets/Automatic Rolling Shutter Forming Machine.png';
+import blueTBarCeilingGrid from '../assets/Blue T-Bar Ceiling Grid Machine in Factory.png';
+import blueSheetShearing from '../assets/Blue Industrial Sheet Shearing Machine.png';
+import customBlueRollForming from '../assets/Custom Blue Roll Forming Machine Line.png';
+import industrialRollingShutterSpring from '../assets/Industrial Rolling Shutter Spring Machine.png';
+import industrialCeilingSection from '../assets/Industrial Ceiling Section Roll Forming Line.png';
+import bluePopChannel from '../assets/Blue POP Channel Roll Forming Machine.png';
+import slottedAngleRollForming from '../assets/Slotted Angle Roll Forming Line in Factory.png';
+import industrialHydraulicTube from '../assets/Industrial Hydraulic Tube Processing Line.png';
+import industrialBlueLockPlate from '../assets/Industrial Blue Lock Plate Forming Machine.png';
 import './ServicesPage.css';
 
 const detailedMachinery = [
@@ -29,7 +40,7 @@ const detailedMachinery = [
       'Schneider / Delta PLC Touch-Screen System with Batch Counting'
     ],
     software: ['EN-31 Hardened Rollers', 'Delta / Schneider PLC', 'Flying Shear Cut', 'Heavy Gear Drive'],
-    image: bannerChatgpt
+    image: automaticRollingShutter
   },
   {
     id: '02',
@@ -46,7 +57,7 @@ const detailedMachinery = [
       'EN-31 Vacuum Hardened Tooling Rollers (60–62 HRC)'
     ],
     software: ['Rotary Stitching', 'Auto Punch Press', 'Clip Riveting Unit', 'Digital Length Counter'],
-    image: ceilingTgrid
+    image: blueTBarCeilingGrid
   },
   {
     id: '03',
@@ -63,7 +74,7 @@ const detailedMachinery = [
       'Heavy Cast Iron / Fabricated Steel Frame Built for Long Duty Life'
     ],
     software: ['HCHCR D2 Blades', 'Hydraulic Power Pack', 'Digital Back Gauge', 'Foot Pedal Control'],
-    image: sheetShearing
+    image: blueSheetShearing
   },
   {
     id: '04',
@@ -80,7 +91,7 @@ const detailedMachinery = [
       'Fast Cycle Time: Under 60 Seconds per Complete Industrial Shutter Spring'
     ],
     software: ['Cam Pitch Control', 'Hardened Feed Rolls', 'High-Torque Reduction', 'Grade II Wire Ready'],
-    image: sheetShearing
+    image: industrialRollingShutterSpring
   },
   {
     id: '05',
@@ -97,7 +108,7 @@ const detailedMachinery = [
       'Automated PLC Batch Counter & Pre-Programmed Length Presets'
     ],
     software: ['Anti-Slip Knurling', 'Post-Cut Hydraulic', 'Touchscreen PLC', 'Dual Decoiler'],
-    image: ceilingTgrid
+    image: industrialCeilingSection
   },
   {
     id: '06',
@@ -114,7 +125,7 @@ const detailedMachinery = [
       'One-Touch Auto Mode with Manual Inching / Jog Capability'
     ],
     software: ['EN-31 Tooling', 'Heavy Chain Drive', 'Optical Rotary Encoder', 'Hydraulic Station'],
-    image: ceilingTgrid
+    image: bluePopChannel
   },
   {
     id: '07',
@@ -131,7 +142,7 @@ const detailedMachinery = [
       'Synchronized Cut-Off System Aligned Directly with Hole Pitch'
     ],
     software: ['Gang Punch Press', 'Heavy Duty Base', 'CR/HR Strip Ready', 'Hole-Pitch Sync'],
-    image: bannerPrecision
+    image: slottedAngleRollForming
   },
   {
     id: '08',
@@ -148,7 +159,7 @@ const detailedMachinery = [
       'Straightness Tolerance ≤ 1.0 mm per 3 Meters Length'
     ],
     software: ['EN-31 Rollers', 'Side Guide Stands', 'Wind-Lock Ready', 'Flying Shear'],
-    image: machineHydraulic
+    image: industrialHydraulicTube
   },
   {
     id: '09',
@@ -165,7 +176,7 @@ const detailedMachinery = [
       'Delta / Schneider PLC Touch-Screen System with Batch Counter'
     ],
     software: ['Lock Hole Punching', 'Heavy Bottom Plate', 'D3 Die Tooling', 'Helical Gearbox'],
-    image: machineHydraulic
+    image: industrialBlueLockPlate
   },
   {
     id: '10',
@@ -182,7 +193,7 @@ const detailedMachinery = [
       'Live Material Trial Run & Tolerance Validation at Bawana Before Dispatch'
     ],
     software: ['Flower CAD Design', 'EN-31 / D3 Steel', 'Vacuum Heat Treatment', 'Hard Chrome 25µm'],
-    image: bannerSolutions
+    image: customBlueRollForming
   }
 ];
 

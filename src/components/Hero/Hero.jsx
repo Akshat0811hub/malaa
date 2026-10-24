@@ -4,36 +4,31 @@ import ArrowButton from '../Common/ArrowButton';
 import { handleImageError } from '../../utils/imageFallbacks';
 import './Hero.css';
 
-import bannerChatgpt from '../../assets/banner-chatgpt.jpeg';
-import bannerAdvanced from '../../assets/banner-rolling-shutter-advanced.png';
-import bannerSolutions from '../../assets/banner-solutions.png';
-import bannerShearing from '../../assets/sheet-shearing-machine.jpg';
+import cleanRollForming from '../../assets/banner1.png';
+import machineHydraulic from '../../assets/banner2.png';
+import facilityOverview from '../../assets/banner3.png';
+
 
 const bannerSlides = [
   {
     id: 1,
-    image: bannerChatgpt,
+    image: cleanRollForming,
     title: 'AUTOMATIC ROLLING SHUTTER LINES',
     subtitle: 'EN-31 Tooling • High-Speed Profiling & Flying Shear'
   },
   {
     id: 2,
-    image: bannerAdvanced,
+    image: machineHydraulic,
     title: 'HIGH-SPEED SHUTTER PATTI SYSTEMS',
     subtitle: 'Heavy Gear Drive • Continuous Slat Production'
   },
   {
     id: 3,
-    image: bannerSolutions,
+    image: facilityOverview,
     title: 'CUSTOM ROLL FORMING LINES',
     subtitle: 'Precision Engineered Machinery • Bawana Works'
   },
-  {
-    id: 4,
-    image: bannerShearing,
-    title: 'INDUSTRIAL SHEET CUTTERS & COILERS',
-    subtitle: 'HCHCR D2 Blades • Heavy ISMC Bed Fabrication'
-  }
+  
 ];
 
 export default function Hero() {

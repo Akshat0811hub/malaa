@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowButton from '../Common/ArrowButton';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { handleImageError } from '../../utils/imageFallbacks';
-import facilityBanner from '../../assets/facility-overview.jpg';
+import facilityBanner from '../../assets/mid-banner.png';
 import './About.css';
 
 export default function About() {
@@ -60,10 +60,7 @@ export default function About() {
               loading="lazy"
               onError={handleImageError}
             />
-            <div className="about-image-caption">
-              <span className="caption-tag">MANUFACTURING FACILITY</span>
-              <span className="caption-desc">In-hous CNC turning, roller hardening & heavy machine assembly — Bawana Industrial Area, Delhi</span>
-            </div>
+            
           </div>
 
           {/* 3 Ethos Pillars */}
